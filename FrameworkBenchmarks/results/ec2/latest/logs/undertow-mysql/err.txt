@@ -1,0 +1,20 @@
+Accessing URL http://127.0.0.1:8080/db/mysql 
+
+Accessing URL http://127.0.0.1:8080/queries/mysql?queries=2 
+
+Accessing URL http://127.0.0.1:8080/queries/mysql?queries=0 
+
+Accessing URL http://127.0.0.1:8080/queries/mysql?queries=foo 
+
+Accessing URL http://127.0.0.1:8080/queries/mysql?queries=501 
+
+Accessing URL http://127.0.0.1:8080/updates/mysql?queries=2 
+
+Accessing URL http://127.0.0.1:8080/updates/mysql?queries=0 
+
+Accessing URL http://127.0.0.1:8080/updates/mysql?queries=foo 
+
+Accessing URL http://127.0.0.1:8080/updates/mysql?queries=501 
+
+Accessing URL http://127.0.0.1:8080/fortunes/mysql 
+

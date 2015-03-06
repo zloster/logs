@@ -1,0 +1,22 @@
+Warning: Identity file /home/travis/.ssh/id_rsa not accessible: No such file or directory.
+Connection closed by UNKNOWN
+Accessing URL http://127.0.0.1:8080/db/mongodb 
+
+Accessing URL http://127.0.0.1:8080/queries/mongodb?queries=2 
+
+Accessing URL http://127.0.0.1:8080/queries/mongodb?queries=0 
+
+Accessing URL http://127.0.0.1:8080/queries/mongodb?queries=foo 
+
+Accessing URL http://127.0.0.1:8080/queries/mongodb?queries=501 
+
+Accessing URL http://127.0.0.1:8080/updates/mongodb?queries=2 
+
+Accessing URL http://127.0.0.1:8080/updates/mongodb?queries=0 
+
+Accessing URL http://127.0.0.1:8080/updates/mongodb?queries=foo 
+
+Accessing URL http://127.0.0.1:8080/updates/mongodb?queries=501 
+
+Accessing URL http://127.0.0.1:8080/fortunes/mongodb 
+

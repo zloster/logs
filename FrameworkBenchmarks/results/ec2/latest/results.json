@@ -1,0 +1,105 @@
+{
+  "name": "ec2", 
+  "succeeded": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "frameworks": [
+    "undertow-edge", 
+    "undertow-edge-mongodb", 
+    "undertow-edge-mysql", 
+    "undertow-edge-postgresql"
+  ], 
+  "verify": {
+    "undertow-edge-mongodb": {
+      "query": "pass", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }, 
+    "undertow": {
+      "plaintext": "pass", 
+      "json": "pass"
+    }, 
+    "undertow-mysql": {
+      "query": "pass", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }, 
+    "undertow-postgresql": {
+      "query": "pass", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }, 
+    "undertow-mongodb": {
+      "query": "pass", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }, 
+    "undertow-edge-postgresql": {
+      "query": "pass", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }, 
+    "undertow-edge-mysql": {
+      "query": "pass", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }, 
+    "undertow-edge": {
+      "plaintext": "pass", 
+      "json": "pass"
+    }
+  }, 
+  "completed": {
+    "undertow-edge-mongodb": "20150306104933", 
+    "undertow": "20150306100623", 
+    "undertow-mysql": "20150306101250", 
+    "undertow-postgresql": "20150306101558", 
+    "undertow-mongodb": "20150306100940", 
+    "undertow-edge-postgresql": "20150306111852", 
+    "undertow-edge-mysql": "20150306111519", 
+    "undertow-edge": "20150306104419"
+  }, 
+  "failed": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "rawData": {
+    "fortune": {}, 
+    "plaintext": {}, 
+    "db": {}, 
+    "update": {}, 
+    "json": {}, 
+    "query": {}
+  }, 
+  "duration": 15, 
+  "queryIntervals": [
+    1, 
+    5, 
+    10, 
+    15, 
+    20
+  ], 
+  "concurrencyLevels": [
+    8, 
+    16, 
+    32, 
+    64, 
+    128, 
+    256
+  ]
+}
