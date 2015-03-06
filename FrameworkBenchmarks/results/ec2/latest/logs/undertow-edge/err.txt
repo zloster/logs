@@ -1,0 +1,12 @@
+Mar 06, 2015 10:42:03 AM org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultHttpClient tryExecute
+INFO: I/O exception (org.apache.maven.wagon.providers.http.httpclient.NoHttpResponseException) caught when processing request: The target server failed to respond
+Mar 06, 2015 10:42:03 AM org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultHttpClient tryExecute
+INFO: I/O exception (org.apache.maven.wagon.providers.http.httpclient.NoHttpResponseException) caught when processing request: The target server failed to respond
+Mar 06, 2015 10:42:03 AM org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultHttpClient tryExecute
+INFO: Retrying request
+Mar 06, 2015 10:42:03 AM org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultHttpClient tryExecute
+INFO: Retrying request
+Accessing URL http://127.0.0.1:8080/json 
+
+Accessing URL http://127.0.0.1:8080/plaintext 
+
