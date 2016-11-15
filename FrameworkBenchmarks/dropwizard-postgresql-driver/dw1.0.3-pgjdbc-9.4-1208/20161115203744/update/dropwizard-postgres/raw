@@ -1,0 +1,170 @@
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 2.0
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+    $ toolset/run-tests.py --install server --test go
+    $ cat results/latest/logs/go/out.txt
+
+  You can get lots of help:
+    $ toolset/run-tests.py --help
+
+  This Vagrant environment is already setup and ready to go, so you
+  can safely ignore any flags about users, hosts, or identity files 
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+---------------------------------------------------------
+ Running Primer dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9090/db/update?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9090/db/update?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    96.83ms   78.19ms 471.15ms   83.30%
+    Req/Sec    13.33      8.59    50.00     73.97%
+  Latency Distribution
+     50%   71.61ms
+     75%  126.21ms
+     90%  198.08ms
+     99%  381.84ms
+  462 requests in 5.09s, 102.21KB read
+Requests/sec:     90.75
+Transfer/sec:     20.08KB
+
+---------------------------------------------------------
+ Running Warmup dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db/update?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db/update?queries=2
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    57.74ms   33.49ms 262.93ms   70.98%
+    Req/Sec    71.06     22.47   140.00     70.00%
+  Latency Distribution
+     50%   50.33ms
+     75%   76.35ms
+     90%  103.83ms
+     99%  158.56ms
+  2130 requests in 15.04s, 471.28KB read
+Requests/sec:    141.60
+Transfer/sec:     31.33KB
+
+---------------------------------------------------------
+ Synchronizing time
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+ Queries: 1 for dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db/update?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db/update?queries=1
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    38.47ms   28.15ms 294.80ms   78.32%
+    Req/Sec   112.44     34.07   202.00     68.73%
+  Latency Distribution
+     50%   31.30ms
+     75%   50.35ms
+     90%   74.67ms
+     99%  135.54ms
+  3360 requests in 15.05s, 639.11KB read
+Requests/sec:    223.26
+Transfer/sec:     42.47KB
+STARTTIME 1479242639
+ENDTIME 1479242654
+
+---------------------------------------------------------
+ Queries: 5 for dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db/update?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db/update?queries=5
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   100.17ms   41.97ms 279.70ms   66.53%
+    Req/Sec    40.02     13.68    80.00     74.14%
+  Latency Distribution
+     50%   94.57ms
+     75%  127.99ms
+     90%  155.98ms
+     99%  220.26ms
+  1198 requests in 15.09s, 377.80KB read
+Requests/sec:     79.39
+Transfer/sec:     25.04KB
+STARTTIME 1479242656
+ENDTIME 1479242671
+
+---------------------------------------------------------
+ Queries: 10 for dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db/update?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db/update?queries=10
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   174.66ms   56.24ms 363.87ms   68.71%
+    Req/Sec    22.90      9.12    50.00     70.61%
+  Latency Distribution
+     50%  168.73ms
+     75%  210.70ms
+     90%  251.32ms
+     99%  331.84ms
+  682 requests in 15.10s, 320.89KB read
+Requests/sec:     45.17
+Transfer/sec:     21.25KB
+STARTTIME 1479242673
+ENDTIME 1479242689
+
+---------------------------------------------------------
+ Queries: 15 for dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db/update?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db/update?queries=15
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   234.74ms   70.03ms 455.79ms   67.91%
+    Req/Sec    17.37      8.08    40.00     58.87%
+  Latency Distribution
+     50%  227.97ms
+     75%  279.87ms
+     90%  331.81ms
+     99%  410.95ms
+  508 requests in 15.08s, 317.82KB read
+Requests/sec:     33.69
+Transfer/sec:     21.08KB
+STARTTIME 1479242691
+ENDTIME 1479242706
+
+---------------------------------------------------------
+ Queries: 20 for dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db/update?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db/update?queries=20
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   299.63ms   88.46ms 604.95ms   69.27%
+    Req/Sec    13.81      6.85    30.00     85.04%
+  Latency Distribution
+     50%  293.52ms
+     75%  355.45ms
+     90%  413.08ms
+     99%  539.24ms
+  397 requests in 15.02s, 310.00KB read
+Requests/sec:     26.43
+Transfer/sec:     20.64KB
+STARTTIME 1479242708
+ENDTIME 1479242723

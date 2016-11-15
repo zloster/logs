@@ -1,0 +1,173 @@
+{
+  "succeeded": {
+    "fortune": [
+      "dropwizard-postgres"
+    ], 
+    "plaintext": [], 
+    "db": [
+      "dropwizard-postgres"
+    ], 
+    "update": [
+      "dropwizard-postgres"
+    ], 
+    "json": [], 
+    "query": [
+      "dropwizard-postgres"
+    ]
+  }, 
+  "frameworks": [
+    "dropwizard-postgres"
+  ], 
+  "verify": {
+    "dropwizard-postgres": {
+      "query": "pass", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }
+  }, 
+  "completed": {
+    "dropwizard-postgres": "20161115210147"
+  }, 
+  "failed": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "concurrencyLevels": [
+    8
+  ], 
+  "duration": 15, 
+  "queryIntervals": [
+    1, 
+    5, 
+    10, 
+    15, 
+    20
+  ], 
+  "rawData": {
+    "fortune": {
+      "dropwizard-postgres": [
+        {
+          "latencyAvg": "30.46ms", 
+          "latencyMax": "271.16ms", 
+          "latencyStdev": "24.81ms", 
+          "totalRequests": 4390, 
+          "startTime": 1479243669, 
+          "endTime": 1479243684
+        }
+      ]
+    }, 
+    "plaintext": {}, 
+    "slocCounts": {
+      "dropwizard": 488
+    }, 
+    "db": {
+      "dropwizard-postgres": [
+        {
+          "latencyAvg": "38.60ms", 
+          "latencyMax": "216.57ms", 
+          "latencyStdev": "28.59ms", 
+          "totalRequests": 3371, 
+          "startTime": 1479243385, 
+          "endTime": 1479243400
+        }
+      ]
+    }, 
+    "update": {
+      "dropwizard-postgres": [
+        {
+          "latencyAvg": "36.71ms", 
+          "latencyMax": "227.12ms", 
+          "latencyStdev": "26.41ms", 
+          "totalRequests": 3528, 
+          "startTime": 1479243551, 
+          "endTime": 1479243566
+        }, 
+        {
+          "latencyAvg": "102.84ms", 
+          "latencyMax": "365.82ms", 
+          "latencyStdev": "44.57ms", 
+          "totalRequests": 1169, 
+          "startTime": 1479243568, 
+          "endTime": 1479243583
+        }, 
+        {
+          "latencyAvg": "187.11ms", 
+          "latencyMax": "448.58ms", 
+          "latencyStdev": "66.67ms", 
+          "totalRequests": 637, 
+          "startTime": 1479243585, 
+          "endTime": 1479243600
+        }, 
+        {
+          "latencyAvg": "262.19ms", 
+          "latencyMax": "483.59ms", 
+          "latencyStdev": "71.42ms", 
+          "totalRequests": 455, 
+          "startTime": 1479243602, 
+          "endTime": 1479243618
+        }, 
+        {
+          "latencyAvg": "337.17ms", 
+          "latencyMax": "628.04ms", 
+          "latencyStdev": "87.41ms", 
+          "totalRequests": 354, 
+          "startTime": 1479243620, 
+          "endTime": 1479243635
+        }
+      ]
+    }, 
+    "json": {}, 
+    "commitCounts": {
+      "dropwizard": 27
+    }, 
+    "query": {
+      "dropwizard-postgres": [
+        {
+          "latencyAvg": "29.09ms", 
+          "latencyMax": "191.08ms", 
+          "latencyStdev": "22.41ms", 
+          "totalRequests": 4534, 
+          "startTime": 1479243433, 
+          "endTime": 1479243448
+        }, 
+        {
+          "latencyAvg": "47.91ms", 
+          "latencyMax": "198.51ms", 
+          "latencyStdev": "25.69ms", 
+          "totalRequests": 2556, 
+          "startTime": 1479243450, 
+          "endTime": 1479243466
+        }, 
+        {
+          "latencyAvg": "67.14ms", 
+          "latencyMax": "194.30ms", 
+          "latencyStdev": "29.27ms", 
+          "totalRequests": 1797, 
+          "startTime": 1479243468, 
+          "endTime": 1479243483
+        }, 
+        {
+          "latencyAvg": "76.95ms", 
+          "latencyMax": "295.31ms", 
+          "latencyStdev": "31.61ms", 
+          "totalRequests": 1573, 
+          "startTime": 1479243485, 
+          "endTime": 1479243500
+        }, 
+        {
+          "latencyAvg": "97.68ms", 
+          "latencyMax": "447.20ms", 
+          "latencyStdev": "53.94ms", 
+          "totalRequests": 1260, 
+          "startTime": 1479243502, 
+          "endTime": 1479243517
+        }
+      ]
+    }
+  }
+}

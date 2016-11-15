@@ -1,0 +1,5 @@
+--------------------------------------------------------------------------------
+  VERIFYING DB
+--------------------------------------------------------------------------------
+Accessing URL http://127.0.0.1:9090/db 
+CaseInsensitiveDict({'date': 'Tue, 15 Nov 2016 20:40:31 GMT', 'content-type': 'application/json', 'content-length': '31', 'vary': 'Accept-Encoding', 'server': 'Jetty(9.3.z-SNAPSHOT)'}){"id":2204,"randomNumber":3976}   [32mPASS[0m for http://127.0.0.1:9090/db

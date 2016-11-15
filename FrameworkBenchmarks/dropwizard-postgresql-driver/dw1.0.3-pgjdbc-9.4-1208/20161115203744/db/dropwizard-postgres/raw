@@ -1,0 +1,94 @@
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Nov 15 20:38:30 UTC 2016
+
+  System load:  1.65               Processes:           102
+  Usage of /:   18.1% of 39.34GB   Users logged in:     1
+  Memory usage: 23%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                 IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+    $ toolset/run-tests.py --install server --test go
+    $ cat results/latest/logs/go/out.txt
+
+  You can get lots of help:
+    $ toolset/run-tests.py --help
+
+  This Vagrant environment is already setup and ready to go, so you
+  can safely ignore any flags about users, hosts, or identity files 
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+---------------------------------------------------------
+ Running Primer dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9090/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9090/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    72.31ms   41.37ms 270.21ms   72.26%
+    Req/Sec    14.68      7.29    40.00     84.31%
+  Latency Distribution
+     50%   66.29ms
+     75%   91.01ms
+     90%  125.96ms
+     99%  213.79ms
+  570 requests in 5.10s, 107.30KB read
+Requests/sec:    111.78
+Transfer/sec:     21.04KB
+
+---------------------------------------------------------
+ Running Warmup dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    50.65ms   32.45ms 236.40ms   68.96%
+    Req/Sec    82.03     20.28   141.00     71.62%
+  Latency Distribution
+     50%   45.38ms
+     75%   68.32ms
+     90%   94.46ms
+     99%  148.69ms
+  2465 requests in 15.10s, 464.02KB read
+Requests/sec:    163.28
+Transfer/sec:     30.74KB
+
+---------------------------------------------------------
+ Synchronizing time
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+ Concurrency: 8 for dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/db
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.47ms   26.72ms 229.06ms   77.44%
+    Req/Sec   122.69     30.86   210.00     71.28%
+  Latency Distribution
+     50%   28.84ms
+     75%   48.50ms
+     90%   71.75ms
+     99%  122.93ms
+  3683 requests in 15.09s, 693.35KB read
+Requests/sec:    244.02
+Transfer/sec:     45.94KB
+STARTTIME 1479242473
+ENDTIME 1479242488
