@@ -1,0 +1,86 @@
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 2.0
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+    $ toolset/run-tests.py --install server --test go
+    $ cat results/latest/logs/go/out.txt
+
+  You can get lots of help:
+    $ toolset/run-tests.py --help
+
+  This Vagrant environment is already setup and ready to go, so you
+  can safely ignore any flags about users, hosts, or identity files 
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+---------------------------------------------------------
+ Running Primer dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9090/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9090/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    43.94ms   31.82ms 189.33ms   72.56%
+    Req/Sec    24.72     13.29    80.00     61.27%
+  Latency Distribution
+     50%   36.33ms
+     75%   61.05ms
+     90%   87.71ms
+     99%  139.95ms
+  982 requests in 5.06s, 1.57MB read
+Requests/sec:    194.15
+Transfer/sec:    318.52KB
+
+---------------------------------------------------------
+ Running Warmup dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/fortunes
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    33.61ms   25.48ms 233.91ms   78.49%
+    Req/Sec   129.34     33.14   227.00     72.64%
+  Latency Distribution
+     50%   26.60ms
+     75%   45.32ms
+     90%   67.41ms
+     99%  119.71ms
+  3883 requests in 15.08s, 6.22MB read
+Requests/sec:    257.56
+Transfer/sec:    422.56KB
+
+---------------------------------------------------------
+ Synchronizing time
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+ Concurrency: 8 for dropwizard-postgres
+ wrk -H 'Host: localhost' -H 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 2 http://127.0.0.1:9090/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9090/fortunes
+  2 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    30.28ms   22.98ms 184.94ms   78.77%
+    Req/Sec   144.26     31.92   220.00     71.19%
+  Latency Distribution
+     50%   23.86ms
+     75%   40.70ms
+     90%   61.69ms
+     99%  107.38ms
+  4320 requests in 15.06s, 6.92MB read
+Requests/sec:    286.77
+Transfer/sec:    470.48KB
+STARTTIME 1479242757
+ENDTIME 1479242772
