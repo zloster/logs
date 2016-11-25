@@ -1,0 +1,67 @@
+{
+  "succeeded": {
+    "fortune": [
+      "dropwizard-jdbi-postgres"
+    ], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "frameworks": [
+    "dropwizard-jdbi-postgres"
+  ], 
+  "verify": {
+    "dropwizard-jdbi-postgres": {
+      "fortune": "pass"
+    }
+  }, 
+  "completed": {
+    "dropwizard-jdbi-postgres": "20161122081738"
+  }, 
+  "failed": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "concurrencyLevels": [
+    8
+  ], 
+  "duration": 15, 
+  "queryIntervals": [
+    1, 
+    5, 
+    10, 
+    15, 
+    20
+  ], 
+  "rawData": {
+    "fortune": {
+      "dropwizard-jdbi-postgres": [
+        {
+          "latencyAvg": "13.70ms", 
+          "latencyMax": "110.32ms", 
+          "latencyStdev": "11.20ms", 
+          "totalRequests": 6954, 
+          "startTime": 1479802621, 
+          "endTime": 1479802636
+        }
+      ]
+    }, 
+    "plaintext": {}, 
+    "slocCounts": {
+      "dropwizard": 498
+    }, 
+    "db": {}, 
+    "update": {}, 
+    "json": {}, 
+    "commitCounts": {
+      "dropwizard": 35
+    }, 
+    "query": {}
+  }
+}
