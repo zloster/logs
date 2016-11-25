@@ -1,0 +1,193 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servlet
+self.results['completed']: {}
+================================================================================
+  Beginning servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Starting servlet
+--------------------------------------------------------------------------------
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet: ++ FW_dep_error=0
+Setup servlet: ++ FW_any_errors=0
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup.sh
+Setup servlet: ++ sed -i 's|localhost|127.0.0.1|g' src/main/webapp/WEB-INF/resin-web.xml
+Setup servlet: ++ fw_depends java resin maven
+Setup servlet: ++ set -E
+Setup servlet: ++ for depend in '"$@"'
+Setup servlet: +++ awk '{print tolower($0)}'
+Setup servlet: +++ echo java
+Setup servlet: ++ depend=java
+Setup servlet: ++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: ++ retcode=0
+Setup servlet: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: +++ pwd
+Setup servlet: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: ++ relative_wd='$FWROOT/installs'
+Setup servlet: +++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed ']'
+Setup servlet: +++ echo 0
+Setup servlet: ++ RETCODE=0
+Setup servlet: ++ '[' 0 == 0 ']'
+Setup servlet: ++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/java.sh ']'
+Setup servlet: ++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ']'
+Setup servlet: ++ echo Installing language: java in '$FWROOT/installs'
+Setup servlet: Installing language: java in $FWROOT/installs
+Setup servlet: ++ set -x
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: ++++ fw_exists java.installed
+Setup servlet: ++++ '[' -f java.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' '!' 0 == 0 ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for resin
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing webserver: resin in $FWROOT/installs
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin.sh
+Setup servlet: +++ fw_depends java
+Setup servlet: +++ set -E
+Setup servlet: +++ for depend in '"$@"'
+Setup servlet: ++++ awk '{print tolower($0)}'
+Setup servlet: ++++ echo java
+Setup servlet: +++ depend=java
+Setup servlet: +++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: +++ retcode=0
+Setup servlet: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: ++++ pwd
+Setup servlet: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: +++ relative_wd='$FWROOT/installs'
+Setup servlet: ++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed
+Setup servlet: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' 0 == 0 ']'
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/java.sh ']'
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ']'
+Setup servlet: +++ echo Installing language: java in '$FWROOT/installs'
+Setup servlet: Installing language: java in $FWROOT/installs
+Setup servlet: +++ set -x
+Setup servlet: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: +++++ fw_exists java.installed
+Setup servlet: +++++ '[' -f java.installed ']'
+Setup servlet: +++++ echo 0
+Setup servlet: ++++ RETCODE=0
+Setup servlet: ++++ '[' '!' 0 == 0 ']'
+Setup servlet: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ return 0
+Setup servlet: +++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for maven
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing system tool: maven in $FWROOT/installs
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet: ++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' '!' 0 == 0 ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.41/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.41/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: maven is installed!
+Setup servlet: [INFO] Scanning for projects...
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 64, column 21
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 72, column 21
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet: [WARNING] 
+Setup servlet: [INFO] 
+Setup servlet: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet: [INFO]                                                                         
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.pom
+Setup servlet: 4/6 KB   6/6 KB            Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.pom (6 KB at 6.5 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.8/jackson-parent-2.8.pom
+Setup servlet: 4/8 KB   5/8 KB   8/8 KB            Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.8/jackson-parent-2.8.pom (8 KB at 72.1 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/27/oss-parent-27.pom
+Setup servlet: 3/20 KB   7/20 KB   11/20 KB   15/20 KB   19/20 KB   20/20 KB              Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/27/oss-parent-27.pom (20 KB at 152.2 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.pom
+Setup servlet: 2/2 KB              Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.pom (2 KB at 12.0 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.pom
+Setup servlet: 3/6 KB   6/6 KB            Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.pom (6 KB at 47.2 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.jar
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.jar
+Setup servlet: 3/1208 KB   7/1208 KB   11/1208 KB   15/1208 KB   19/1208 KB   23/1208 KB   27/1208 KB   31/1208 KB   35/1208 KB   36/1208 KB   39/1208 KB   42/1208 KB   45/1208 KB   48/1208 KB   52/1208 KB   56/1208 KB   60/1208 KB   64/1208 KB   68/1208 KB   72/1208 KB   76/1208 KB   80/1208 KB   84/1208 KB   88/1208 KB   4/275 KB   92/1208 KB   4/275 KB   96/1208 KB   4/275 KB   100/1208 KB   4/275 KB   104/1208 KB   4/275 KB   88/1208 KB   8/275 KB   104/1208 KB   12/275 KB   104/1208 KB   14/275 KB   104/1208 KB   14/275 KB   108/1208 KB   4/55 KB   14/275 KB   108/1208 KB   4/55 KB   14/275 KB   108/1208 KB   8/55 KB   14/275 KB   112/1208 KB   8/55 KB   14/275 KB   112/1208 KB   12/55 KB   14/275 KB   116/1208 KB   12/55 KB   14/275 KB   116/1208 KB   14/55 KB   14/275 KB   120/1208 KB   14/55 KB   14/275 KB   124/1208 KB   14/55 KB   14/275 KB   128/1208 KB   14/55 KB   14/275 KB   132/1208 KB   14/55 KB   14/275 KB   136/1208 KB   14/55 KB   14/275 KB   140/1208 KB   14/55 KB   14/275 KB   144/1208 KB   14/55 KB   14/275 KB   148/1208 KB   14/55 KB   14/275 KB   152/1208 KB   14/55 KB   14/275 KB   156/1208 KB   14/55 KB   18/275 KB   156/1208 KB   18/55 KB   14/275 KB   156/1208 KB   18/55 KB   18/275 KB   160/1208 KB   18/55 KB   22/275 KB   164/1208 KB   18/55 KB   22/275 KB   168/1208 KB   18/55 KB   22/275 KB   172/1208 KB   22/55 KB   22/275 KB   176/1208 KB   22/55 KB   22/275 KB   180/1208 KB   22/55 KB   22/275 KB   184/1208 KB   22/55 KB   22/275 KB   172/1208 KB   22/55 KB   22/275 KB   188/1208 KB   26/55 KB   22/275 KB   176/1208 KB   22/55 KB   22/275 KB   188/1208 KB   22/55 KB   22/275 KB   192/1208 KB   26/55 KB   22/275 KB   196/1208 KB   26/55 KB   26/275 KB   196/1208 KB   26/55 KB   30/275 KB   196/1208 KB   26/55 KB   34/275 KB   196/1208 KB   26/55 KB   38/275 KB   196/1208 KB   26/55 KB   38/275 KB   200/1208 KB   26/55 KB   38/275 KB   204/1208 KB   26/55 KB   38/275 KB   208/1208 KB   26/55 KB   38/275 KB   212/1208 KB   30/55 KB   38/275 KB   216/1208 KB   30/55 KB   38/275 KB   220/1208 KB   30/55 KB   38/275 KB   208/1208 KB   30/55 KB   38/275 KB   220/1208 KB   34/55 KB   42/275 KB   220/1208 KB   38/55 KB   42/275 KB   220/1208 KB   42/55 KB   42/275 KB   220/1208 KB   34/55 KB   42/275 KB   220/1208 KB   46/55 KB   42/275 KB   224/1208 KB   50/55 KB   46/275 KB   224/1208 KB   50/55 KB   42/275 KB   224/1208 KB   46/55 KB   46/275 KB   228/1208 KB   54/55 KB   46/275 KB   232/1208 KB   54/55 KB   46/275 KB   236/1208 KB   54/55 KB   46/275 KB   224/1208 KB   54/55 KB   46/275 KB   236/1208 KB   55/55 KB   50/275 KB   236/1208 KB   55/55 KB   50/275 KB   240/1208 KB   55/55 KB   54/275 KB   244/1208 KB   55/55 KB   54/275 KB   244/1208 KB   55/55 KB   54/275 KB   248/1208 KB   55/55 KB   58/275 KB   248/1208 KB   55/55 KB   58/275 KB   252/1208 KB   55/55 KB   62/275 KB   252/1208 KB   55/55 KB   66/275 KB   256/1208 KB   55/55 KB   66/275 KB   260/1208 KB   55/55 KB   66/275 KB   264/1208 KB   55/55 KB   66/275 KB   264/1208 KB   55/55 KB   66/275 KB   268/1208 KB   55/55 KB   66/275 KB   272/1208 KB   55/55 KB   66/275 KB   276/1208 KB   55/55 KB   66/275 KB   280/1208 KB   55/55 KB   66/275 KB   284/1208 KB   55/55 KB   66/275 KB   288/1208 KB   55/55 KB   66/275 KB   292/1208 KB   55/55 KB   66/275 KB   296/1208 KB   55/55 KB   66/275 KB   300/1208 KB   55/55 KB   70/275 KB   300/1208 KB   55/55 KB   70/275 KB   304/1208 KB   55/55 KB   70/275 KB   308/1208 KB   55/55 KB   70/275 KB   312/1208 KB   55/55 KB   70/275 KB   316/1208 KB   55/55 KB   74/275 KB   316/1208 KB   55/55 KB   78/275 KB   320/1208 KB   55/55 KB                                        Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar (55 KB at 201.0 KB/sec)
+Setup servlet: 82/275 KB   320/1208 KB              74/275 KB   320/1208 KB   55/55 KB   86/275 KB   320/1208 KB   86/275 KB   324/1208 KB   86/275 KB   328/1208 KB   86/275 KB   332/1208 KB   86/275 KB   336/1208 KB   86/275 KB   340/1208 KB   86/275 KB   344/1208 KB   86/275 KB   348/1208 KB   86/275 KB   352/1208 KB   86/275 KB   356/1208 KB   86/275 KB   360/1208 KB   86/275 KB   364/1208 KB   90/275 KB   364/1208 KB   90/275 KB   368/1208 KB   90/275 KB   372/1208 KB   90/275 KB   376/1208 KB   90/275 KB   380/1208 KB   90/275 KB   384/1208 KB   90/275 KB   388/1208 KB   90/275 KB   392/1208 KB   94/275 KB   396/1208 KB   94/275 KB   396/1208 KB   94/275 KB   400/1208 KB   98/275 KB   400/1208 KB   98/275 KB   404/1208 KB   102/275 KB   404/1208 KB   102/275 KB   408/1208 KB   106/275 KB   408/1208 KB   106/275 KB   412/1208 KB   110/275 KB   412/1208 KB   110/275 KB   416/1208 KB   114/275 KB   416/1208 KB   118/275 KB   416/1208 KB   118/275 KB   420/1208 KB   118/275 KB   424/1208 KB   118/275 KB   428/1208 KB   122/275 KB   432/1208 KB   126/275 KB   432/1208 KB   130/275 KB   432/1208 KB   134/275 KB   432/1208 KB   138/275 KB   432/1208 KB   142/275 KB   432/1208 KB   146/275 KB   432/1208 KB   150/275 KB   432/1208 KB   154/275 KB   432/1208 KB   158/275 KB   432/1208 KB   118/275 KB   432/1208 KB   158/275 KB   436/1208 KB   158/275 KB   440/1208 KB   158/275 KB   444/1208 KB   158/275 KB   448/1208 KB   158/275 KB   452/1208 KB   158/275 KB   456/1208 KB   162/275 KB   456/1208 KB   166/275 KB   456/1208 KB   170/275 KB   456/1208 KB   174/275 KB   456/1208 KB   178/275 KB   456/1208 KB   182/275 KB   456/1208 KB   186/275 KB   456/1208 KB   190/275 KB   456/1208 KB   194/275 KB   456/1208 KB   198/275 KB   456/1208 KB   202/275 KB   460/1208 KB   202/275 KB   460/1208 KB   202/275 KB   464/1208 KB   206/275 KB   464/1208 KB   206/275 KB   468/1208 KB   210/275 KB   468/1208 KB   210/275 KB   472/1208 KB   214/275 KB   472/1208 KB   214/275 KB   476/1208 KB   214/275 KB   480/1208 KB   218/275 KB   480/1208 KB   218/275 KB   484/1208 KB   222/275 KB   484/1208 KB   226/275 KB   488/1208 KB   226/275 KB   488/1208 KB   226/275 KB   492/1208 KB   226/275 KB   496/1208 KB   230/275 KB   496/1208 KB   234/275 KB   496/1208 KB   234/275 KB   500/1208 KB   238/275 KB   500/1208 KB   238/275 KB   504/1208 KB   238/275 KB   508/1208 KB   238/275 KB   512/1208 KB   242/275 KB   516/1208 KB   242/275 KB   512/1208 KB   246/275 KB   516/1208 KB   250/275 KB   516/1208 KB   254/275 KB   516/1208 KB   258/275 KB   516/1208 KB   262/275 KB   516/1208 KB   266/275 KB   516/1208 KB   270/275 KB   516/1208 KB   274/275 KB   516/1208 KB   275/275 KB   516/1208 KB   275/275 KB   520/1208 KB   275/275 KB   524/1208 KB   275/275 KB   528/1208 KB   275/275 KB   532/1208 KB   275/275 KB   536/1208 KB   275/275 KB   540/1208 KB   275/275 KB   544/1208 KB   275/275 KB   548/1208 KB   275/275 KB   552/1208 KB   275/275 KB   556/1208 KB   275/275 KB   560/1208 KB   275/275 KB   564/1208 KB   275/275 KB   568/1208 KB   275/275 KB   572/1208 KB   275/275 KB   576/1208 KB   275/275 KB   580/1208 KB   275/275 KB   584/1208 KB   275/275 KB   588/1208 KB   275/275 KB   592/1208 KB                              Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.jar (275 KB at 674.4 KB/sec)
+Setup servlet: 596/1208 KB                600/1208 KB   604/1208 KB   608/1208 KB   612/1208 KB   616/1208 KB   620/1208 KB   624/1208 KB   628/1208 KB   632/1208 KB   636/1208 KB   640/1208 KB   644/1208 KB   648/1208 KB   652/1208 KB   656/1208 KB   660/1208 KB   664/1208 KB   668/1208 KB   672/1208 KB   676/1208 KB   680/1208 KB   684/1208 KB   688/1208 KB   692/1208 KB   696/1208 KB   700/1208 KB   704/1208 KB   708/1208 KB   712/1208 KB   716/1208 KB   720/1208 KB   724/1208 KB   728/1208 KB   732/1208 KB   736/1208 KB   740/1208 KB   744/1208 KB   748/1208 KB   752/1208 KB   756/1208 KB   760/1208 KB   764/1208 KB   768/1208 KB   772/1208 KB   776/1208 KB   780/1208 KB   784/1208 KB   788/1208 KB   792/1208 KB   796/1208 KB   800/1208 KB   804/1208 KB   808/1208 KB   812/1208 KB   816/1208 KB   820/1208 KB   824/1208 KB   828/1208 KB   832/1208 KB   836/1208 KB   840/1208 KB   844/1208 KB   848/1208 KB   852/1208 KB   856/1208 KB   860/1208 KB   864/1208 KB   868/1208 KB   872/1208 KB   876/1208 KB   880/1208 KB   884/1208 KB   888/1208 KB   892/1208 KB   896/1208 KB   900/1208 KB   904/1208 KB   908/1208 KB   912/1208 KB   916/1208 KB   920/1208 KB   924/1208 KB   928/1208 KB   932/1208 KB   936/1208 KB   940/1208 KB   944/1208 KB   948/1208 KB   952/1208 KB   956/1208 KB   960/1208 KB   964/1208 KB   968/1208 KB   972/1208 KB   976/1208 KB   980/1208 KB   984/1208 KB   988/1208 KB   992/1208 KB   996/1208 KB   1000/1208 KB   1004/1208 KB   1008/1208 KB   1012/1208 KB   1016/1208 KB   1020/1208 KB   1024/1208 KB   1028/1208 KB   1032/1208 KB   1036/1208 KB   1040/1208 KB   1044/1208 KB   1048/1208 KB   1052/1208 KB   1056/1208 KB   1060/1208 KB   1064/1208 KB   1068/1208 KB   1072/1208 KB   1076/1208 KB   1080/1208 KB   1084/1208 KB   1088/1208 KB   1092/1208 KB   1096/1208 KB   1100/1208 KB   1104/1208 KB   1108/1208 KB   1112/1208 KB   1116/1208 KB   1120/1208 KB   1124/1208 KB   1128/1208 KB   1132/1208 KB   1136/1208 KB   1140/1208 KB   1144/1208 KB   1148/1208 KB   1152/1208 KB   1156/1208 KB   1160/1208 KB   1164/1208 KB   1168/1208 KB   1172/1208 KB   1176/1208 KB   1180/1208 KB   1184/1208 KB   1188/1208 KB   1192/1208 KB   1196/1208 KB   1200/1208 KB   1204/1208 KB   1208/1208 KB   1208/1208 KB                  Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.jar (1208 KB at 1998.9 KB/sec)
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet: [INFO] Packaging webapp
+Setup servlet: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet: [INFO] Processing war project
+Setup servlet: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet: [INFO] Webapp assembled in [282 msecs]
+Setup servlet: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] BUILD SUCCESS
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Total time: 15.582 s
+Setup servlet: [INFO] Finished at: 2016-11-24T18:33:01+00:00
+Setup servlet: [INFO] Final Memory: 17M/131M
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: Resin/4.0.41 launching watchdog at 127.0.0.1:6600
+Setup servlet: Resin/4.0.41 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet: Setup has terminated
+Setup servlet: Status: Poll: 0, Port 8080 bound: False, Time Left: 1:44:20.216912
+Setup servlet: setup.sh process exited naturally with 0
+--------------------------------------------------------------------------------
+  Benchmarking servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopping servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopped servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Saving results through servlet
+--------------------------------------------------------------------------------

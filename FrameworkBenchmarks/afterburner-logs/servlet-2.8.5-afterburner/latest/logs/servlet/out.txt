@@ -1,0 +1,183 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servlet
+self.results['completed']: {}
+================================================================================
+  Beginning servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Starting servlet
+--------------------------------------------------------------------------------
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet: ++ FW_dep_error=0
+Setup servlet: ++ FW_any_errors=0
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup.sh
+Setup servlet: ++ sed -i 's|localhost|127.0.0.1|g' src/main/webapp/WEB-INF/resin-web.xml
+Setup servlet: ++ fw_depends java resin maven
+Setup servlet: ++ set -E
+Setup servlet: ++ for depend in '"$@"'
+Setup servlet: +++ awk '{print tolower($0)}'
+Setup servlet: +++ echo java
+Setup servlet: ++ depend=java
+Setup servlet: ++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: ++ retcode=0
+Setup servlet: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: +++ pwd
+Setup servlet: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: ++ relative_wd='$FWROOT/installs'
+Setup servlet: +++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed ']'
+Setup servlet: +++ echo 0
+Setup servlet: ++ RETCODE=0
+Setup servlet: ++ '[' 0 == 0 ']'
+Setup servlet: ++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/java.sh ']'
+Setup servlet: ++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ']'
+Setup servlet: ++ echo Installing language: java in '$FWROOT/installs'
+Setup servlet: Installing language: java in $FWROOT/installs
+Setup servlet: ++ set -x
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: ++++ fw_exists java.installed
+Setup servlet: ++++ '[' -f java.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' '!' 0 == 0 ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for resin
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing webserver: resin in $FWROOT/installs
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin.sh
+Setup servlet: +++ fw_depends java
+Setup servlet: +++ set -E
+Setup servlet: +++ for depend in '"$@"'
+Setup servlet: ++++ echo java
+Setup servlet: ++++ awk '{print tolower($0)}'
+Setup servlet: +++ depend=java
+Setup servlet: +++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: +++ retcode=0
+Setup servlet: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: ++++ pwd
+Setup servlet: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: +++ relative_wd='$FWROOT/installs'
+Setup servlet: ++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed
+Setup servlet: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' 0 == 0 ']'
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/java.sh ']'
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ']'
+Setup servlet: +++ echo Installing language: java in '$FWROOT/installs'
+Setup servlet: Installing language: java in $FWROOT/installs
+Setup servlet: +++ set -x
+Setup servlet: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: +++++ fw_exists java.installed
+Setup servlet: +++++ '[' -f java.installed ']'
+Setup servlet: +++++ echo 0
+Setup servlet: ++++ RETCODE=0
+Setup servlet: ++++ '[' '!' 0 == 0 ']'
+Setup servlet: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ return 0
+Setup servlet: +++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for maven
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing system tool: maven in $FWROOT/installs
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet: ++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' '!' 0 == 0 ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.41/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.41/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: maven is installed!
+Setup servlet: [INFO] Scanning for projects...
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 70, column 21
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 78, column 21
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet: [WARNING] 
+Setup servlet: [INFO] 
+Setup servlet: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet: [INFO]                                                                         
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.8.5/jackson-module-afterburner-2.8.5.pom
+Setup servlet: 4/4 KB            Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.8.5/jackson-module-afterburner-2.8.5.pom (4 KB at 2.7 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-base/2.8.5/jackson-modules-base-2.8.5.pom
+Setup servlet: 4/4 KB            Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-base/2.8.5/jackson-modules-base-2.8.5.pom (4 KB at 18.6 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.8.5/jackson-module-afterburner-2.8.5.jar
+Setup servlet: 4/144 KB   5/144 KB   8/144 KB   11/144 KB   14/144 KB   17/144 KB   19/144 KB   22/144 KB   25/144 KB   28/144 KB   31/144 KB   33/144 KB   37/144 KB   37/144 KB   40/144 KB   43/144 KB   46/144 KB   49/144 KB   51/144 KB   54/144 KB   57/144 KB   60/144 KB   63/144 KB   65/144 KB   68/144 KB   71/144 KB   72/144 KB   75/144 KB   78/144 KB   81/144 KB   84/144 KB   86/144 KB   89/144 KB   92/144 KB   95/144 KB   97/144 KB   100/144 KB   103/144 KB   106/144 KB   109/144 KB   111/144 KB   114/144 KB   117/144 KB   120/144 KB   123/144 KB   125/144 KB   128/144 KB   132/144 KB   135/144 KB   138/144 KB   141/144 KB   143/144 KB   144/144 KB                Downloaded: http://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.8.5/jackson-module-afterburner-2.8.5.jar (144 KB at 544.0 KB/sec)
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet: [INFO] Packaging webapp
+Setup servlet: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet: [INFO] Processing war project
+Setup servlet: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet: [INFO] Webapp assembled in [256 msecs]
+Setup servlet: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] BUILD SUCCESS
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Total time: 14.234 s
+Setup servlet: [INFO] Finished at: 2016-11-24T18:46:27+00:00
+Setup servlet: [INFO] Final Memory: 17M/133M
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: Resin/4.0.41 launching watchdog at 127.0.0.1:6600
+Setup servlet: Resin/4.0.41 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet: Setup has terminated
+Setup servlet: Status: Poll: 0, Port 8080 bound: False, Time Left: 1:44:21.860924
+Setup servlet: setup.sh process exited naturally with 0
+--------------------------------------------------------------------------------
+  Benchmarking servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopping servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopped servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Saving results through servlet
+--------------------------------------------------------------------------------

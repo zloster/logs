@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Nov 24 18:46:03 UTC 2016
+
+  System load:  0.28               Processes:           110
+  Usage of /:   18.7% of 39.34GB   Users logged in:     1
+  Memory usage: 31%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                 IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+    $ toolset/run-tests.py --install server --test go
+    $ cat results/latest/logs/go/out.txt
+
+  You can get lots of help:
+    $ toolset/run-tests.py --help
+
+  This Vagrant environment is already setup and ready to go, so you
+  can safely ignore any flags about users, hosts, or identity files 
+15 packages can be updated.
+13 updates are security updates.
+
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+---------------------------------------------------------
+ Running Primer servlet
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/servlet/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/servlet/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.87ms    8.21ms  77.46ms   87.65%
+    Req/Sec   303.62    147.84     0.86k    74.25%
+  Latency Distribution
+     50%    1.35ms
+     75%    8.98ms
+     90%   16.15ms
+     99%   37.67ms
+  12207 requests in 5.10s, 1.83MB read
+Requests/sec:   2395.12
+Transfer/sec:    367.22KB
+
+---------------------------------------------------------
+ Running Warmup servlet
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 3 http://127.0.0.1:8080/servlet/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/json
+  3 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.93ms    3.36ms  45.04ms   90.12%
+    Req/Sec     1.55k   342.49     2.52k    70.16%
+  Latency Distribution
+     50%  711.00us
+     75%    1.19ms
+     90%    5.25ms
+     99%   16.80ms
+  69643 requests in 15.09s, 10.43MB read
+Requests/sec:   4616.31
+Transfer/sec:    707.77KB
+
+---------------------------------------------------------
+ Synchronizing time
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+ Concurrency: 8 for servlet
+ wrk -H 'Host: localhost' -H 'application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 15 -c 8 --timeout 8 -t 3 http://127.0.0.1:8080/servlet/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/json
+  3 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.75ms    2.91ms  40.60ms   89.55%
+    Req/Sec     1.64k   265.60     2.35k    74.00%
+  Latency Distribution
+     50%  673.00us
+     75%    1.09ms
+     90%    4.82ms
+     99%   14.83ms
+  73622 requests in 15.04s, 11.02MB read
+Requests/sec:   4894.68
+Transfer/sec:    750.45KB
+STARTTIME 1480013298
+ENDTIME 1480013313
