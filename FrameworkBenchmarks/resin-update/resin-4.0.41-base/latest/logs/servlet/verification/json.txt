@@ -1,0 +1,5 @@
+--------------------------------------------------------------------------------
+  VERIFYING JSON
+--------------------------------------------------------------------------------
+Accessing URL http://127.0.0.1:8080/servlet/json 
+CaseInsensitiveDict({'date': 'Fri, 25 Nov 2016 21:39:56 GMT', 'content-length': '27', 'content-type': 'application/json', 'server': 'Resin/4.0.41'}){"message":"Hello, World!"}   [32mPASS[0m for http://127.0.0.1:8080/servlet/json
