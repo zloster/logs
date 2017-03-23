@@ -1,0 +1,67 @@
+{
+  "succeeded": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [
+      "servlet"
+    ], 
+    "query": []
+  }, 
+  "frameworks": [
+    "servlet"
+  ], 
+  "verify": {
+    "servlet": {
+      "json": "pass"
+    }
+  }, 
+  "completed": {
+    "servlet": "20161126085616"
+  }, 
+  "failed": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "concurrencyLevels": [
+    8
+  ], 
+  "duration": 15, 
+  "queryIntervals": [
+    1, 
+    5, 
+    10, 
+    15, 
+    20
+  ], 
+  "rawData": {
+    "fortune": {}, 
+    "plaintext": {}, 
+    "slocCounts": {
+      "servlet": 619
+    }, 
+    "db": {}, 
+    "update": {}, 
+    "json": {
+      "servlet": [
+        {
+          "latencyAvg": "2.81ms", 
+          "latencyMax": "235.28ms", 
+          "latencyStdev": "12.24ms", 
+          "totalRequests": 75147, 
+          "startTime": 1480150538, 
+          "endTime": 1480150554
+        }
+      ]
+    }, 
+    "commitCounts": {
+      "servlet": 24
+    }, 
+    "query": {}
+  }
+}

@@ -1,0 +1,362 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servlet
+self.results['completed']: {}
+================================================================================
+  Beginning servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Starting servlet
+--------------------------------------------------------------------------------
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet: ++ FW_dep_error=0
+Setup servlet: ++ FW_any_errors=0
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup.sh
+Setup servlet: ++ sed -i 's|localhost|127.0.0.1|g' src/main/webapp/WEB-INF/resin-web.xml
+Setup servlet: ++ fw_depends java resin maven
+Setup servlet: ++ set -E
+Setup servlet: ++ for depend in '"$@"'
+Setup servlet: +++ echo java
+Setup servlet: +++ awk '{print tolower($0)}'
+Setup servlet: ++ depend=java
+Setup servlet: ++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: ++ retcode=0
+Setup servlet: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: +++ pwd
+Setup servlet: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: ++ relative_wd='$FWROOT/installs'
+Setup servlet: +++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed ']'
+Setup servlet: +++ echo 0
+Setup servlet: ++ RETCODE=0
+Setup servlet: ++ '[' 0 == 0 ']'
+Setup servlet: ++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/java.sh ']'
+Setup servlet: ++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ']'
+Setup servlet: ++ echo Installing language: java in '$FWROOT/installs'
+Setup servlet: Installing language: java in $FWROOT/installs
+Setup servlet: ++ set -x
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: ++++ fw_exists java.installed
+Setup servlet: ++++ '[' -f java.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' '!' 0 == 0 ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for resin
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing webserver: resin in $FWROOT/installs
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin.sh
+Setup servlet: +++ fw_depends java
+Setup servlet: +++ set -E
+Setup servlet: +++ for depend in '"$@"'
+Setup servlet: ++++ awk '{print tolower($0)}'
+Setup servlet: ++++ echo java
+Setup servlet: +++ depend=java
+Setup servlet: +++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: +++ retcode=0
+Setup servlet: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: ++++ pwd
+Setup servlet: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: +++ relative_wd='$FWROOT/installs'
+Setup servlet: ++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed
+Setup servlet: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/prerequisites.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' 0 == 0 ']'
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/java.sh ']'
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ']'
+Setup servlet: +++ echo Installing language: java in '$FWROOT/installs'
+Setup servlet: Installing language: java in $FWROOT/installs
+Setup servlet: +++ set -x
+Setup servlet: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: +++++ fw_exists java.installed
+Setup servlet: +++++ '[' -f java.installed ']'
+Setup servlet: +++++ echo 0
+Setup servlet: ++++ RETCODE=0
+Setup servlet: ++++ '[' '!' 0 == 0 ']'
+Setup servlet: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ return 0
+Setup servlet: +++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: .Running 'tar xf resin-4.0.49.tar.gz'...please wait
+Setup servlet: Removing compressed tar file
+Setup servlet: checking build system type... x86_64-unknown-linux-gnu
+Setup servlet: checking host system type... x86_64-unknown-linux-gnu
+Setup servlet: checking target system type... x86_64-unknown-linux-gnu
+Setup servlet: checking for a BSD-compatible install... /usr/bin/install -c
+Setup servlet: checking whether build environment is sane... yes
+Setup servlet: checking for a thread-safe mkdir -p... /bin/mkdir -p
+Setup servlet: checking for gawk... gawk
+Setup servlet: checking whether make sets $(MAKE)... yes
+Setup servlet: checking whether make supports nested variables... yes
+Setup servlet: checking for gcc... gcc
+Setup servlet: checking whether the C compiler works... yes
+Setup servlet: checking for C compiler default output file name... a.out
+Setup servlet: checking for suffix of executables... 
+Setup servlet: checking whether we are cross compiling... no
+Setup servlet: checking for suffix of object files... o
+Setup servlet: checking whether we are using the GNU C compiler... yes
+Setup servlet: checking whether gcc accepts -g... yes
+Setup servlet: checking for gcc option to accept ISO C89... none needed
+Setup servlet: checking whether gcc understands -c and -o together... yes
+Setup servlet: checking for style of include used by make... GNU
+Setup servlet: checking dependency style of gcc... none
+Setup servlet: checking for a sed that does not truncate output... /bin/sed
+Setup servlet: checking for grep that handles long lines and -e... /bin/grep
+Setup servlet: checking for egrep... /bin/grep -E
+Setup servlet: checking for fgrep... /bin/grep -F
+Setup servlet: checking how to print strings... printf
+Setup servlet: checking for ld used by gcc... /usr/bin/ld
+Setup servlet: checking if the linker (/usr/bin/ld) is GNU ld... yes
+Setup servlet: checking for egrep... (cached) /bin/grep -E
+Setup servlet: checking how to run the C preprocessor... gcc -E
+Setup servlet: checking for ANSI C header files... yes
+Setup servlet: checking for sys/types.h... yes
+Setup servlet: checking for sys/stat.h... yes
+Setup servlet: checking for stdlib.h... yes
+Setup servlet: checking for string.h... yes
+Setup servlet: checking for memory.h... yes
+Setup servlet: checking for strings.h... yes
+Setup servlet: checking for inttypes.h... yes
+Setup servlet: checking for stdint.h... yes
+Setup servlet: checking for unistd.h... yes
+Setup servlet: checking sys/poll.h usability... yes
+Setup servlet: checking sys/poll.h presence... yes
+Setup servlet: checking for sys/poll.h... yes
+Setup servlet: checking sys/epoll.h usability... yes
+Setup servlet: checking sys/epoll.h presence... yes
+Setup servlet: checking for sys/epoll.h... yes
+Setup servlet: checking for JAVA_HOME... /usr/lib/jvm/java-8-oracle
+Setup servlet: checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+Setup servlet: checking the name lister (/usr/bin/nm -B) interface... BSD nm
+Setup servlet: checking whether ln -s works... yes
+Setup servlet: checking the maximum length of command line arguments... 1572864
+Setup servlet: checking whether the shell understands some XSI constructs... yes
+Setup servlet: checking whether the shell understands "+="... yes
+Setup servlet: checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+Setup servlet: checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+Setup servlet: checking for /usr/bin/ld option to reload object files... -r
+Setup servlet: checking for objdump... objdump
+Setup servlet: checking how to recognize dependent libraries... pass_all
+Setup servlet: checking for dlltool... no
+Setup servlet: checking how to associate runtime and link libraries... printf %s\n
+Setup servlet: checking for ar... ar
+Setup servlet: checking for archiver @FILE support... @
+Setup servlet: checking for strip... strip
+Setup servlet: checking for ranlib... ranlib
+Setup servlet: checking command to parse /usr/bin/nm -B output from gcc object... ok
+Setup servlet: checking for sysroot... no
+Setup servlet: checking for mt... mt
+Setup servlet: checking if mt is a manifest tool... no
+Setup servlet: checking for dlfcn.h... yes
+Setup servlet: checking for objdir... .libs
+Setup servlet: checking if gcc supports -fno-rtti -fno-exceptions... no
+Setup servlet: checking for gcc option to produce PIC... -fPIC -DPIC
+Setup servlet: checking if gcc PIC flag -fPIC -DPIC works... yes
+Setup servlet: checking if gcc static flag -static works... yes
+Setup servlet: checking if gcc supports -c -o file.o... yes
+Setup servlet: checking if gcc supports -c -o file.o... (cached) yes
+Setup servlet: checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+Setup servlet: checking whether -lc should be explicitly linked in... no
+Setup servlet: checking dynamic linker characteristics... GNU/Linux ld.so
+Setup servlet: checking how to hardcode library paths into programs... immediate
+Setup servlet: checking whether stripping libraries is possible... yes
+Setup servlet: checking if libtool supports shared libraries... yes
+Setup servlet: checking whether to build shared libraries... yes
+Setup servlet: checking whether to build static libraries... yes
+Setup servlet: checking if /usr/lib/jvm/java-8-oracle/bin/java is Java 1.6... yes
+Setup servlet: checking if /usr/lib/jvm/java-8-oracle/bin/java is 64-bit... yes
+Setup servlet: ./configure: line 12773: plugin_ld_shlib: command not found
+Setup servlet: checking if /bin/cp accepts -u... yes
+Setup servlet: checking for JNI in /usr/lib/jvm/java-8-oracle/include/linux ... found
+Setup servlet: Using JVMTI for class reloading
+Setup servlet: Using openssl include in ... /usr/include
+Setup servlet: Using openssl lib in ... 
+Setup servlet: Using openssl libraries ...  -lssl -lcrypto
+Setup servlet: checking that generated files are newer than configure... done
+Setup servlet: configure: creating ./config.status
+Setup servlet: config.status: creating Makefile
+Setup servlet: config.status: creating modules/c/src/Makefile
+Setup servlet: config.status: creating modules/c/src/common/Makefile
+Setup servlet: config.status: creating modules/c/src/apache2/Makefile
+Setup servlet: config.status: creating modules/c/src/resin_os/Makefile
+Setup servlet: config.status: creating init.d/resin
+Setup servlet: config.status: creating bin/resinctl
+Setup servlet: config.status: executing depfiles commands
+Setup servlet: config.status: executing libtool commands
+Setup servlet: 
+Setup servlet: 
+Setup servlet: Resin Configuration Summary:
+Setup servlet: 
+Setup servlet:   RESIN       : 4.0.49
+Setup servlet:     home      : /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49
+Setup servlet:     root      : /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49
+Setup servlet:     conf      : /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/conf
+Setup servlet:     log       : /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/log
+Setup servlet:     plugins   : common resin_os 
+Setup servlet:     init      : /etc/init.d/resin
+Setup servlet: 
+Setup servlet:   JAVA_HOME   : /usr/lib/jvm/java-8-oracle
+Setup servlet: 
+Setup servlet:   JNI         : 64-bit
+Setup servlet:     include       : -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux
+Setup servlet:     CFLAGS        : 
+Setup servlet:     cflags_shlib  : -fpic
+Setup servlet:     ld_shlib      : gcc
+Setup servlet:     ldflags_shlib : -shared -fPIC -m64
+Setup servlet:     libs_shlib    : 
+Setup servlet:     epoll() for keepalives
+Setup servlet: 
+Setup servlet: 
+Setup servlet: make[1]: Entering directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src'
+Setup servlet: for dir in common resin_os ; do (cd $dir; make); done
+Setup servlet: make[2]: Entering directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/common'
+Setup servlet: gcc -c -I/usr/include -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fpic  stream.c
+Setup servlet: stream.c: In function ‘select_host’:
+Setup servlet: stream.c:1583:40: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+Setup servlet:      srand(65521 * time(0) + getpid() + (int) cluster);
+Setup servlet:                                         ^
+Setup servlet: gcc -c -I/usr/include -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fpic  config.c
+Setup servlet: gcc -c -I/usr/include -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fpic  memory.c
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/libtool --silent --mode=compile gcc -o stream.lo -c -I/usr/include -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fpic  stream.c
+Setup servlet: stream.c: In function 'select_host':
+Setup servlet: stream.c:1583:40: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+Setup servlet:      srand(65521 * time(0) + getpid() + (int) cluster);
+Setup servlet:                                         ^
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/libtool --silent --mode=compile gcc -o config.lo -c -I/usr/include -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fpic  config.c
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/libtool --silent --mode=compile gcc -o memory.lo -c -I/usr/include -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fpic  memory.c
+Setup servlet: make[2]: Leaving directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/common'
+Setup servlet: make[2]: Entering directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/resin_os'
+Setup servlet: gcc -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fPIC -DRESIN_HOME=\"/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49\" -I/usr/include -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux -I../common -DCPU=\"x86_64\" -DOS=   -c -o boot.o boot.c
+Setup servlet: boot.c: In function ‘Java_com_caucho_bootjni_JniProcess_exec’:
+Setup servlet: boot.c:330:13: warning: ignoring return value of ‘setregid’, declared with attribute warn_unused_result [-Wunused-result]
+Setup servlet:      setregid(gid, gid);
+Setup servlet:              ^
+Setup servlet: boot.c:333:13: warning: ignoring return value of ‘setreuid’, declared with attribute warn_unused_result [-Wunused-result]
+Setup servlet:      setreuid(uid, uid);
+Setup servlet:              ^
+Setup servlet: gcc -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fPIC -DRESIN_HOME=\"/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49\" -I/usr/include -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux -I../common -DCPU=\"x86_64\" -DOS=   -c -o java.o java.c
+Setup servlet: gcc -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fPIC -DRESIN_HOME=\"/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49\" -I/usr/include -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux -I../common -DCPU=\"x86_64\" -DOS=   -c -o jni_os.o jni_os.c
+Setup servlet: gcc -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fPIC -DRESIN_HOME=\"/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49\" -I/usr/include -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux -I../common -DCPU=\"x86_64\" -DOS=   -c -o jni_jvmti.o jni_jvmti.c
+Setup servlet: gcc -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fPIC -DRESIN_HOME=\"/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49\" -I/usr/include -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux -I../common -DCPU=\"x86_64\" -DOS=   -c -o jni_socket.o jni_socket.c
+Setup servlet: gcc -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fPIC -DRESIN_HOME=\"/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49\" -I/usr/include -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux -I../common -DCPU=\"x86_64\" -DOS=   -c -o memory.o memory.c
+Setup servlet: gcc -g -O2 -DEPOLL -D_POSIX_PTHREAD_SEMANTICS -DB64 -pthread -fPIC -fno-omit-frame-pointer -O2 -DHAS_SOCK_TIMEOUT -DHAS_SENDFILE -DHAS_SPLICE -DPOLL -DHAS_JVMTI  -fPIC -DRESIN_HOME=\"/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49\" -I/usr/include -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux -I../common -DCPU=\"x86_64\" -DOS=   -c -o std.o std.c
+Setup servlet: gcc -shared -fPIC -m64 -o libresin_os.so boot.o java.o jni_os.o jni_jvmti.o jni_socket.o memory.o std.o -lpthread -lrt -lc
+Setup servlet: make[2]: Leaving directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/resin_os'
+Setup servlet: make[1]: Leaving directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src'
+Setup servlet: make[1]: Entering directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49'
+Setup servlet: make[1]: Nothing to be done for `install-exec-am'.
+Setup servlet: make[1]: Nothing to be done for `install-data-am'.
+Setup servlet: make[1]: Leaving directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49'
+Setup servlet: Installing Resin log /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/log.
+Setup servlet: Setting /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/bin/resinctl executable.
+Setup servlet: Setting /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/bin/resin.sh executable.
+Setup servlet: Installing Resin init.d script /etc/init.d/resin.
+Setup servlet: WARNING: Resin init.d script install failed. Ensure  is writable by testrunner, or run 'make install' as root.
+Setup servlet: make[1]: Entering directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src'
+Setup servlet: Installing configured Resin plugins common resin_os 
+Setup servlet: make[2]: Entering directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/common'
+Setup servlet: Installing plugin common
+Setup servlet: make[2]: Leaving directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/common'
+Setup servlet: make[2]: Entering directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/resin_os'
+Setup servlet: Installing plugin resin_os
+Setup servlet: cp libresin_os.so /home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/libexec64
+Setup servlet: make[2]: Leaving directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src/resin_os'
+Setup servlet: make[1]: Leaving directory `/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/modules/c/src'
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for maven
+Setup servlet: /home/vagrant/FrameworkBenchmarks/installs /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing system tool: maven in $FWROOT/installs
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet: ++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet: ++++ echo 0
+Setup servlet: +++ RETCODE=0
+Setup servlet: +++ '[' '!' 0 == 0 ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.49/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: maven is installed!
+Setup servlet: [INFO] Scanning for projects...
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 64, column 21
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 72, column 21
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet: [WARNING] 
+Setup servlet: [INFO] 
+Setup servlet: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet: [INFO]                                                                         
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet: [INFO] Packaging webapp
+Setup servlet: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet: [INFO] Processing war project
+Setup servlet: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet: [INFO] Webapp assembled in [274 msecs]
+Setup servlet: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] BUILD SUCCESS
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Total time: 11.115 s
+Setup servlet: [INFO] Finished at: 2016-11-26T08:53:47+00:00
+Setup servlet: [INFO] Final Memory: 14M/132M
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: Resin/4.0.49 launching watchdog at 127.0.0.1:6600
+Setup servlet: Resin/4.0.49 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet: Setup has terminated
+Setup servlet: Status: Poll: 0, Port 8080 bound: False, Time Left: 1:42:49.732036
+Setup servlet: setup.sh process exited naturally with 0
+--------------------------------------------------------------------------------
+  Benchmarking servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopping servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopped servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Saving results through servlet
+--------------------------------------------------------------------------------
