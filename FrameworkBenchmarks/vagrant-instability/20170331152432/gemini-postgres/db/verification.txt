@@ -1,0 +1,28 @@
+--------------------------------------------------------------------------------
+  VERIFYING DB
+--------------------------------------------------------------------------------
+Accessing URL http://TFB-server:8080/db 
+   [31mFAIL[0m for http://TFB-server:8080
+     Caused Exception in TFB
+                 This almost certainly means your return value is incorrect,
+                 but also that you have found a bug. Please submit an issue
+                 including this message: HTTPConnectionPool(host='TFB-server', port=8080): Read timed out. (read timeout=15)
+     Traceback (most recent call last):
+       File "/home/vagrant/FrameworkBenchmarks/toolset/benchmark/framework_test.py", line 388, in verify_type
+         results = test.verify(base_url)
+       File "/home/vagrant/FrameworkBenchmarks/toolset/benchmark/test_types/db_type.py", line 27, in verify
+         headers, body = self.request_headers_and_body(url)
+       File "/home/vagrant/FrameworkBenchmarks/toolset/benchmark/test_types/framework_test_type.py", line 85, in request_headers_and_body
+         r = requests.get(url, timeout=15, headers=headers)
+       File "/usr/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+         return request('get', url, **kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+         return session.request(method=method, url=url, **kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 455, in request
+         resp = self.send(prep, **send_kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 558, in send
+         r = adapter.send(request, **kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 387, in send
+         raise Timeout(e)
+     Timeout: HTTPConnectionPool(host='TFB-server', port=8080): Read timed out. (read timeout=15)
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements

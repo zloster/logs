@@ -1,0 +1,69 @@
+{
+  "environmentDescription": "(unspecified, hostname = tfb-all)", 
+  "uuid": "8b9947ee-ff6b-47aa-ba65-040968093de5", 
+  "succeeded": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "failed": {
+    "fortune": [], 
+    "plaintext": [], 
+    "db": [], 
+    "update": [], 
+    "json": [], 
+    "query": []
+  }, 
+  "verify": {
+    "servlet-postgres-raw": {
+      "query": "warn", 
+      "db": "pass", 
+      "update": "pass", 
+      "fortune": "pass"
+    }, 
+    "gemini-postgres": {
+      "query": "warn", 
+      "db": "warn", 
+      "update": "warn", 
+      "fortune": "pass"
+    }
+  }, 
+  "completed": {
+    "servlet-postgres-raw": "20170331155114", 
+    "gemini-postgres": "20170331154835"
+  }, 
+  "concurrencyLevels": [
+    8, 
+    16, 
+    32, 
+    64, 
+    128, 
+    256
+  ], 
+  "frameworks": [
+    "gemini-postgres", 
+    "servlet-postgres-raw"
+  ], 
+  "completionTime": 1490975474104, 
+  "rawData": {
+    "fortune": {}, 
+    "plaintext": {}, 
+    "db": {}, 
+    "update": {}, 
+    "json": {}, 
+    "query": {}
+  }, 
+  "startTime": 1490975164126, 
+  "duration": 60, 
+  "queryIntervals": [
+    1, 
+    5, 
+    10, 
+    15, 
+    20
+  ], 
+  "name": "(unspecified, datetime = 2017-03-31 15:46:04)"
+}

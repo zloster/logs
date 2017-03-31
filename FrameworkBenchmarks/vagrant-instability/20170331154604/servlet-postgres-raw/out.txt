@@ -1,0 +1,271 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servlet-postgres-raw
+self.results['completed']: {u'gemini-postgres': u'20170331154835'}
+================================================================================
+  Beginning servlet-postgres-raw
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Starting servlet-postgres-raw
+--------------------------------------------------------------------------------
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:46:32 UTC 2017
+
+  System load:  0.23              Processes:           103
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 8%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+mysql start/running, process 5257
+mongod start/running, process 5332
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+cassandra: unrecognized service
+-bash: line 6: /opt/elasticsearch/elasticsearch: No such file or directory
+Setup servlet-postgres-raw: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet-postgres-raw: ++ export DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-raw: ++ DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-raw: ++ FW_dep_error=0
+Setup servlet-postgres-raw: ++ FW_any_errors=0
+Setup servlet-postgres-raw: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup_postgresql.sh
+Setup servlet-postgres-raw: ++ fw_depends postgresql
+Setup servlet-postgres-raw: ++ set -E
+Setup servlet-postgres-raw: ++ for depend in '"$@"'
+Setup servlet-postgres-raw: +++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: +++ echo postgresql
+Setup servlet-postgres-raw: ++ depend=postgresql
+Setup servlet-postgres-raw: ++ echo Searching for postgresql
+Setup servlet-postgres-raw: Searching for postgresql
+Setup servlet-postgres-raw: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: ++ retcode=0
+Setup servlet-postgres-raw: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: +++ pwd
+Setup servlet-postgres-raw: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name postgresql.sh
+Setup servlet-postgres-raw: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh ]]
+Setup servlet-postgres-raw: ++ echo Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: ++ set -x
+Setup servlet-postgres-raw: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: +++ fw_depends databases
+Setup servlet-postgres-raw: +++ set -E
+Setup servlet-postgres-raw: +++ for depend in '"$@"'
+Setup servlet-postgres-raw: ++++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: ++++ echo databases
+Setup servlet-postgres-raw: +++ depend=databases
+Setup servlet-postgres-raw: +++ echo Searching for databases
+Setup servlet-postgres-raw: Searching for databases
+Setup servlet-postgres-raw: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: +++ retcode=0
+Setup servlet-postgres-raw: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: ++++ pwd
+Setup servlet-postgres-raw: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: +++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup servlet-postgres-raw: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup servlet-postgres-raw: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++ set -x
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-raw: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup servlet-postgres-raw: +++++ echo 0
+Setup servlet-postgres-raw: ++++ RETCODE=0
+Setup servlet-postgres-raw: ++++ '[' '!' 0 == 0 ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: databases is installed!
+Setup servlet-postgres-raw: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup servlet-postgres-raw: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:  * Documentation:  https://help.ubuntu.com/
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:   System information as of Fri Mar 31 15:48:55 UTC 2017
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:   System load:  0.9               Processes:           101
+Setup servlet-postgres-raw:   Usage of /:   9.0% of 39.34GB   Users logged in:     1
+Setup servlet-postgres-raw:   Memory usage: 8%                IP address for eth0: 10.0.2.15
+Setup servlet-postgres-raw:   Swap usage:   0%                IP address for eth1: 172.16.0.16
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:   Graph this data and manage this system at:
+Setup servlet-postgres-raw:     https://landscape.canonical.com/
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw: New release '16.04.2 LTS' available.
+Setup servlet-postgres-raw: Run 'do-release-upgrade' to upgrade to it.
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw: Welcome to the FrameworkBenchmarks project!
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:   To get started, perhaps try this:
+Setup servlet-postgres-raw:     $ cd FrameworkBenchmarks
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:   You can get lots of help:
+Setup servlet-postgres-raw:     $ tfb --help
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:   You can run a test like:
+Setup servlet-postgres-raw:     $ tfb --mode verify --test gemini
+Setup servlet-postgres-raw: 
+Setup servlet-postgres-raw:   This Vagrant environment is already setup and ready to go.
+Setup servlet-postgres-raw: ERROR:  role "benchmarkdbuser" already exists
+Setup servlet-postgres-raw: NOTICE:  table "world" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "fortune" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "World" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "Fortune" does not exist, skipping
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: databases is installed!
+Setup servlet-postgres-raw: Searching for java
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ fw_installed java
+Setup servlet-postgres-raw: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-raw: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: Searching for resin
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-raw: ++++ fw_depends java
+Setup servlet-postgres-raw: ++++ set -E
+Setup servlet-postgres-raw: ++++ for depend in '"$@"'
+Setup servlet-postgres-raw: +++++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: +++++ echo java
+Setup servlet-postgres-raw: ++++ depend=java
+Setup servlet-postgres-raw: ++++ echo Searching for java
+Setup servlet-postgres-raw: Searching for java
+Setup servlet-postgres-raw: ++++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: ++++ retcode=0
+Setup servlet-postgres-raw: ++++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: +++++ pwd
+Setup servlet-postgres-raw: ++++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ++++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: +++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup servlet-postgres-raw: ++++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup servlet-postgres-raw: ++++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ set -x
+Setup servlet-postgres-raw: ++++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: +++++ fw_installed java
+Setup servlet-postgres-raw: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-raw: +++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-raw: ++++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: ++++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: ++++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ return 0
+Setup servlet-postgres-raw: +++++ return 0
+Setup servlet-postgres-raw: ++++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: Searching for maven
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-raw: ++++ fw_installed maven
+Setup servlet-postgres-raw: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet-postgres-raw: +++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: maven is installed!
+Setup servlet-postgres-raw: [INFO] Scanning for projects...
+Setup servlet-postgres-raw: [WARNING] 
+Setup servlet-postgres-raw: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-raw: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 64, column 12
+Setup servlet-postgres-raw: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 74, column 12
+Setup servlet-postgres-raw: [WARNING] 
+Setup servlet-postgres-raw: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet-postgres-raw: [WARNING] 
+Setup servlet-postgres-raw: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet-postgres-raw: [WARNING] 
+Setup servlet-postgres-raw: [INFO] 
+Setup servlet-postgres-raw: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet-postgres-raw: [INFO]                                                                         
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] 
+Setup servlet-postgres-raw: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet-postgres-raw: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet-postgres-raw: [INFO] 
+Setup servlet-postgres-raw: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet-postgres-raw: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet-postgres-raw: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet-postgres-raw: [INFO] 
+Setup servlet-postgres-raw: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet-postgres-raw: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet-postgres-raw: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet-postgres-raw: [INFO] 
+Setup servlet-postgres-raw: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet-postgres-raw: [INFO] Packaging webapp
+Setup servlet-postgres-raw: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet-postgres-raw: [INFO] Processing war project
+Setup servlet-postgres-raw: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet-postgres-raw: [INFO] Webapp assembled in [2205 msecs]
+Setup servlet-postgres-raw: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet-postgres-raw: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] BUILD SUCCESS
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] Total time: 20.101 s
+Setup servlet-postgres-raw: [INFO] Finished at: 2017-03-31T15:49:27+00:00
+Setup servlet-postgres-raw: [INFO] Final Memory: 15M/142M
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup servlet-postgres-raw: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet-postgres-raw: Status: Poll: None, Port 8080 bound: True, Time Left: 1:43:58.983444
+Setup servlet-postgres-raw: Bound port detected on 8080
+--------------------------------------------------------------------------------
+  Stopping servlet-postgres-raw
+--------------------------------------------------------------------------------
+Server servlet-postgres-raw: Framework processes have terminated
+--------------------------------------------------------------------------------
+  Stopped servlet-postgres-raw
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Saving results through servlet-postgres-raw
+--------------------------------------------------------------------------------

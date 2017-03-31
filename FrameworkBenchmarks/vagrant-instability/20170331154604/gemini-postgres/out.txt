@@ -1,0 +1,249 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: gemini-postgres
+self.results['completed']: {}
+================================================================================
+  Beginning gemini-postgres
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Starting gemini-postgres
+--------------------------------------------------------------------------------
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:46:10 UTC 2017
+
+  System load:  0.22              Processes:           98
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 9%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+mysql start/running, process 4300
+mongod start/running, process 4372
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+cassandra: unrecognized service
+-bash: line 6: /opt/elasticsearch/elasticsearch: No such file or directory
+Setup gemini-postgres: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup gemini-postgres: ++ export DEBIAN_FRONTEND=noninteractive
+Setup gemini-postgres: ++ DEBIAN_FRONTEND=noninteractive
+Setup gemini-postgres: ++ FW_dep_error=0
+Setup gemini-postgres: ++ FW_any_errors=0
+Setup gemini-postgres: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/start_postgresql.sh
+Setup gemini-postgres: ++ fw_depends postgresql java ant resin maven
+Setup gemini-postgres: ++ set -E
+Setup gemini-postgres: ++ for depend in '"$@"'
+Setup gemini-postgres: +++ awk '{print tolower($0)}'
+Setup gemini-postgres: +++ echo postgresql
+Setup gemini-postgres: ++ depend=postgresql
+Setup gemini-postgres: ++ echo Searching for postgresql
+Setup gemini-postgres: Searching for postgresql
+Setup gemini-postgres: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: ++ retcode=0
+Setup gemini-postgres: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: +++ pwd
+Setup gemini-postgres: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name postgresql.sh
+Setup gemini-postgres: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh ]]
+Setup gemini-postgres: ++ echo Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: ++ set -x
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: +++ fw_depends databases
+Setup gemini-postgres: +++ set -E
+Setup gemini-postgres: +++ for depend in '"$@"'
+Setup gemini-postgres: ++++ awk '{print tolower($0)}'
+Setup gemini-postgres: ++++ echo databases
+Setup gemini-postgres: +++ depend=databases
+Setup gemini-postgres: +++ echo Searching for databases
+Setup gemini-postgres: Searching for databases
+Setup gemini-postgres: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: +++ retcode=0
+Setup gemini-postgres: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ++++ pwd
+Setup gemini-postgres: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: +++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup gemini-postgres: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup gemini-postgres: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++ set -x
+Setup gemini-postgres: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup gemini-postgres: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup gemini-postgres: +++++ echo 0
+Setup gemini-postgres: ++++ RETCODE=0
+Setup gemini-postgres: ++++ '[' '!' 0 == 0 ']'
+Setup gemini-postgres: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: +++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: databases is installed!
+Setup gemini-postgres: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup gemini-postgres: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+Setup gemini-postgres: 
+Setup gemini-postgres:  * Documentation:  https://help.ubuntu.com/
+Setup gemini-postgres: 
+Setup gemini-postgres:   System information as of Fri Mar 31 15:46:31 UTC 2017
+Setup gemini-postgres: 
+Setup gemini-postgres:   System load:  0.23              Processes:           100
+Setup gemini-postgres:   Usage of /:   9.0% of 39.34GB   Users logged in:     1
+Setup gemini-postgres:   Memory usage: 8%                IP address for eth0: 10.0.2.15
+Setup gemini-postgres:   Swap usage:   0%                IP address for eth1: 172.16.0.16
+Setup gemini-postgres: 
+Setup gemini-postgres:   Graph this data and manage this system at:
+Setup gemini-postgres:     https://landscape.canonical.com/
+Setup gemini-postgres: 
+Setup gemini-postgres: New release '16.04.2 LTS' available.
+Setup gemini-postgres: Run 'do-release-upgrade' to upgrade to it.
+Setup gemini-postgres: 
+Setup gemini-postgres: 
+Setup gemini-postgres: Welcome to the FrameworkBenchmarks project!
+Setup gemini-postgres: 
+Setup gemini-postgres:   To get started, perhaps try this:
+Setup gemini-postgres:     $ cd FrameworkBenchmarks
+Setup gemini-postgres: 
+Setup gemini-postgres:   You can get lots of help:
+Setup gemini-postgres:     $ tfb --help
+Setup gemini-postgres: 
+Setup gemini-postgres:   You can run a test like:
+Setup gemini-postgres:     $ tfb --mode verify --test gemini
+Setup gemini-postgres: 
+Setup gemini-postgres:   This Vagrant environment is already setup and ready to go.
+Setup gemini-postgres: ERROR:  role "benchmarkdbuser" already exists
+Setup gemini-postgres: NOTICE:  table "world" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "fortune" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "World" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "Fortune" does not exist, skipping
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: databases is installed!
+Setup gemini-postgres: Searching for java
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ fw_installed java
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup gemini-postgres: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: Searching for ant
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: ant from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/ant.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/ant.sh
+Setup gemini-postgres: +++ fw_installed ant
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/ant.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/ant.installed
+Setup gemini-postgres: ++++ export PATH=/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ant is installed!
+Setup gemini-postgres: Searching for resin
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup gemini-postgres: +++ fw_depends java
+Setup gemini-postgres: +++ set -E
+Setup gemini-postgres: +++ for depend in '"$@"'
+Setup gemini-postgres: ++++ echo java
+Setup gemini-postgres: ++++ awk '{print tolower($0)}'
+Setup gemini-postgres: +++ depend=java
+Setup gemini-postgres: +++ echo Searching for java
+Setup gemini-postgres: Searching for java
+Setup gemini-postgres: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: +++ retcode=0
+Setup gemini-postgres: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ++++ pwd
+Setup gemini-postgres: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: +++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup gemini-postgres: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup gemini-postgres: +++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ set -x
+Setup gemini-postgres: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: ++++ fw_installed java
+Setup gemini-postgres: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup gemini-postgres: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup gemini-postgres: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: +++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: Searching for maven
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup gemini-postgres: +++ fw_installed maven
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup gemini-postgres: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: maven is installed!
+Setup gemini-postgres: Buildfile: /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/build.xml
+Setup gemini-postgres: 
+Setup gemini-postgres: compile:
+Setup gemini-postgres:     [javac] /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/build.xml:25: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+Setup gemini-postgres: 
+Setup gemini-postgres: BUILD SUCCESSFUL
+Setup gemini-postgres: Total time: 2 seconds
+Setup gemini-postgres: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup gemini-postgres: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup gemini-postgres: Status: Poll: None, Port 8080 bound: True, Time Left: 1:44:18.189887
+Setup gemini-postgres: Bound port detected on 8080
+--------------------------------------------------------------------------------
+  Stopping gemini-postgres
+--------------------------------------------------------------------------------
+Server gemini-postgres: Framework processes have terminated
+--------------------------------------------------------------------------------
+  Stopped gemini-postgres
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Saving results through gemini-postgres
+--------------------------------------------------------------------------------
