@@ -1,0 +1,1663 @@
+zloster@box:~/sources/logs/FrameworkBenchmarks/vagrant-instability$ vagrant halt 42a38f8
+==> default: Attempting graceful shutdown of VM...
+==> default: Forcing shutdown of VM...
+zloster@box:~/sources/logs/FrameworkBenchmarks/vagrant-instability$ vagrant up 42a38f8
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: A newer version of the box 'ubuntu/trusty64' is available! You currently
+==> default: have version '20170323.0.0'. The latest is version '20170330.0.0'. Run
+==> default: `vagrant box update` to update.
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 8080 (guest) => 28080 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => /home/zloster/sources/FrameworkBenchmarks/deployment/vagrant
+    default: /home/vagrant/FrameworkBenchmarks/toolset => /home/zloster/sources/FrameworkBenchmarks/toolset
+    default: /home/vagrant/FrameworkBenchmarks/frameworks => /home/zloster/sources/FrameworkBenchmarks/frameworks
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+zloster@box:~/sources/logs/FrameworkBenchmarks/vagrant-instability$ vagrant ssh 42a38f8
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:22:27 UTC 2017
+
+  System load:  0.85              Processes:           98
+  Usage of /:   8.8% of 39.34GB   Users logged in:     0
+  Memory usage: 4%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+Last login: Fri Mar 31 14:48:46 2017 from 10.0.2.2
+vagrant@tfb-all:~$ cd FrameworkBenchmarks/
+vagrant@tfb-all:~/FrameworkBenchmarks$ tfb --mode verify --test gemini-postgres servlet-postgres-raw
+FWROOT is /home/vagrant/FrameworkBenchmarks.
+WARNING:root:results.json for test not found.
+================================================================================
+  Preparing Server, Database, and Client ...
+================================================================================
+
+net.ipv4.tcp_max_syn_backlog = 65535
+net.core.somaxconn = 65535
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+kernel.shmmax = 134217728
+kernel.shmall = 2097152
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:24:13 UTC 2017
+
+  System load:  0.18              Processes:           96
+  Usage of /:   9.0% of 39.34GB   Users logged in:     0
+  Memory usage: 8%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+net.ipv4.tcp_max_syn_backlog = 65535
+net.core.somaxconn = 65535
+kernel.sched_autogroup_enabled = 0
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+kernel.shmmax = 2147483648
+kernel.shmall = 2097152
+kernel.sem = 250 32000 256 512
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:24:37 UTC 2017
+
+  System load:  0.21              Processes:           102
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 8%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+net.ipv4.tcp_max_syn_backlog = 65535
+net.core.somaxconn = 65535
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+kernel.shmmax = 2147483648
+kernel.shmall = 2097152
+================================================================================
+  Running Tests...
+================================================================================
+
+--------------------------------------------------------------------------------                               | Rough ETA:  --:--:--
+  Running Test: gemini-postgres
+--------------------------------------------------------------------------------
+
+database connection test results:
+mysql: is GO!
+mongodb: is GO!
+postgresql: is GO!
+cassandra: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+elasticsearch: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:24:40 UTC 2017
+
+  System load:  0.35              Processes:           103
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 8%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+sudo: /etc/init.d/apache2: command not found
+INFO:root:Running setup module start (cwd=/home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini)
+INFO:root:To run gemini-postgres manually, copy/paste this:
+      export FWROOT=/home/vagrant/FrameworkBenchmarks          &&  \
+      export TROOT=/home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini           &&  \
+      export IROOT=/home/vagrant/FrameworkBenchmarks/installs           &&  \
+      export DBHOST=127.0.0.1          &&  \
+      export LOGDIR=/home/vagrant/FrameworkBenchmarks/results/20170331152432/logs/gemini-postgres          &&  \
+      export MAX_THREADS=8     &&  \
+      export MAX_CONCURRENCY=256 && \
+      cd /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini && \
+      /home/vagrant/FrameworkBenchmarks/installs/TFBReaper "bash -exc \"source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh && source /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/start_postgresql.sh\"
+Setup gemini-postgres: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup gemini-postgres: ++ export DEBIAN_FRONTEND=noninteractive
+Setup gemini-postgres: ++ DEBIAN_FRONTEND=noninteractive
+Setup gemini-postgres: ++ FW_dep_error=0
+Setup gemini-postgres: ++ FW_any_errors=0
+Setup gemini-postgres: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/start_postgresql.sh
+Setup gemini-postgres: ++ fw_depends postgresql java ant resin maven
+Setup gemini-postgres: ++ set -E
+Setup gemini-postgres: ++ for depend in '"$@"'
+Setup gemini-postgres: +++ awk '{print tolower($0)}'
+Setup gemini-postgres: +++ echo postgresql
+Setup gemini-postgres: ++ depend=postgresql
+Setup gemini-postgres: ++ echo Searching for postgresql
+Setup gemini-postgres: Searching for postgresql
+Setup gemini-postgres: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: ++ retcode=0
+Setup gemini-postgres: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: +++ pwd
+Setup gemini-postgres: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name postgresql.sh
+Setup gemini-postgres: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh ]]
+Setup gemini-postgres: ++ echo Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: ++ set -x
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: +++ fw_depends databases
+Setup gemini-postgres: +++ set -E
+Setup gemini-postgres: +++ for depend in '"$@"'
+Setup gemini-postgres: ++++ echo databases
+Setup gemini-postgres: ++++ awk '{print tolower($0)}'
+Setup gemini-postgres: +++ depend=databases
+Setup gemini-postgres: +++ echo Searching for databases
+Setup gemini-postgres: Searching for databases
+Setup gemini-postgres: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: +++ retcode=0
+Setup gemini-postgres: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ++++ pwd
+Setup gemini-postgres: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: +++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup gemini-postgres: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup gemini-postgres: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++ set -x
+Setup gemini-postgres: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup gemini-postgres: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup gemini-postgres: +++++ echo 0
+Setup gemini-postgres: ++++ RETCODE=0
+Setup gemini-postgres: ++++ '[' '!' 0 == 0 ']'
+Setup gemini-postgres: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: +++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: databases is installed!
+Setup gemini-postgres: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup gemini-postgres: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+Setup gemini-postgres:
+Setup gemini-postgres:  * Documentation:  https://help.ubuntu.com/
+Setup gemini-postgres:
+Setup gemini-postgres:   System information as of Fri Mar 31 15:24:59 UTC 2017
+Setup gemini-postgres:
+Setup gemini-postgres:   System load:  0.25              Processes:           103
+Setup gemini-postgres:   Usage of /:   9.0% of 39.34GB   Users logged in:     1
+Setup gemini-postgres:   Memory usage: 7%                IP address for eth0: 10.0.2.15
+Setup gemini-postgres:   Swap usage:   0%                IP address for eth1: 172.16.0.16
+Setup gemini-postgres:
+Setup gemini-postgres:   Graph this data and manage this system at:
+Setup gemini-postgres:     https://landscape.canonical.com/
+Setup gemini-postgres:
+Setup gemini-postgres: New release '16.04.2 LTS' available.
+Setup gemini-postgres: Run 'do-release-upgrade' to upgrade to it.
+Setup gemini-postgres:
+Setup gemini-postgres:
+Setup gemini-postgres: Welcome to the FrameworkBenchmarks project!
+Setup gemini-postgres:
+Setup gemini-postgres:   To get started, perhaps try this:
+Setup gemini-postgres:     $ cd FrameworkBenchmarks
+Setup gemini-postgres:
+Setup gemini-postgres:   You can get lots of help:
+Setup gemini-postgres:     $ tfb --help
+Setup gemini-postgres:
+Setup gemini-postgres:   You can run a test like:
+Setup gemini-postgres:     $ tfb --mode verify --test gemini
+Setup gemini-postgres:
+Setup gemini-postgres:   This Vagrant environment is already setup and ready to go.
+Setup gemini-postgres: ERROR:  role "benchmarkdbuser" already exists
+Setup gemini-postgres: NOTICE:  table "world" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "fortune" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "World" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "Fortune" does not exist, skipping
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: databases is installed!
+Setup gemini-postgres: Searching for java
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ fw_installed java
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup gemini-postgres: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: Searching for ant
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: ant from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/ant.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/ant.sh
+Setup gemini-postgres: +++ fw_installed ant
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/ant.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/ant.installed
+Setup gemini-postgres: ++++ export PATH=/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ant is installed!
+Setup gemini-postgres: Searching for resin
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup gemini-postgres: +++ fw_depends java
+Setup gemini-postgres: +++ set -E
+Setup gemini-postgres: +++ for depend in '"$@"'
+Setup gemini-postgres: ++++ echo java
+Setup gemini-postgres: ++++ awk '{print tolower($0)}'
+Setup gemini-postgres: +++ depend=java
+Setup gemini-postgres: +++ echo Searching for java
+Setup gemini-postgres: Searching for java
+Setup gemini-postgres: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: +++ retcode=0
+Setup gemini-postgres: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ++++ pwd
+Setup gemini-postgres: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: +++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup gemini-postgres: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup gemini-postgres: +++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ set -x
+Setup gemini-postgres: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: ++++ fw_installed java
+Setup gemini-postgres: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup gemini-postgres: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup gemini-postgres: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: +++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: Searching for maven
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup gemini-postgres: +++ fw_installed maven
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup gemini-postgres: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: maven is installed!
+Setup gemini-postgres: Buildfile: /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/build.xml
+Setup gemini-postgres:
+Setup gemini-postgres: compile:
+Setup gemini-postgres:     [javac] /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/build.xml:25: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+Setup gemini-postgres:
+Setup gemini-postgres: BUILD SUCCESSFUL
+Setup gemini-postgres: Total time: 2 seconds
+Setup gemini-postgres: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup gemini-postgres: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup gemini-postgres: Status: Poll: None, Port 8080 bound: True, Time Left: 1:44:16.578171
+Setup gemini-postgres: Bound port detected on 8080
+INFO:root:Executed start_postgresql.sh, returning 0
+INFO:root:Sleeping 60 seconds to ensure framework is ready
+INFO:root:Verifying framework URLs
+Accessing URL http://TFB-server:8080/db:
+WARNING:root:Verifying test db for gemini-postgres caused an exception: HTTPConnectionPool(host='TFB-server', port=8080): Read timed out. (read timeout=15)
+   FAIL for http://TFB-server:8080
+
+     Caused Exception in TFB
+                 This almost certainly means your return value is incorrect,
+                 but also that you have found a bug. Please submit an issue
+                 including this message: HTTPConnectionPool(host='TFB-server', port=8080): Read timed out. (read timeout=15)
+     Traceback (most recent call last):
+       File "/home/vagrant/FrameworkBenchmarks/toolset/benchmark/framework_test.py", line 388, in verify_type
+         results = test.verify(base_url)
+       File "/home/vagrant/FrameworkBenchmarks/toolset/benchmark/test_types/db_type.py", line 27, in verify
+         headers, body = self.request_headers_and_body(url)
+       File "/home/vagrant/FrameworkBenchmarks/toolset/benchmark/test_types/framework_test_type.py", line 85, in request_headers_and_body
+         r = requests.get(url, timeout=15, headers=headers)
+       File "/usr/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+         return request('get', url, **kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+         return session.request(method=method, url=url, **kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 455, in request
+         resp = self.send(prep, **send_kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 558, in send
+         r = adapter.send(request, **kwargs)
+       File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 387, in send
+         raise Timeout(e)
+     Timeout: HTTPConnectionPool(host='TFB-server', port=8080): Read timed out. (read timeout=15)
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/query?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":8538,"randomNumber":7324},{"id":5"
+Accessing URL http://TFB-server:8080/query?queries=0:
+  Response (trimmed to 40 bytes): "[{"id":9974,"randomNumber":3061}]"
+Accessing URL http://TFB-server:8080/query?queries=foo:
+  Response (trimmed to 40 bytes): "[{"id":5690,"randomNumber":7245}]"
+Accessing URL http://TFB-server:8080/query?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":4232,"randomNumber":3113},{"id":6"
+Accessing URL http://TFB-server:8080/query?queries=:
+  Response (trimmed to 40 bytes): "[{"id":756,"randomNumber":4931}]"
+   WARN for http://TFB-server:8080/query?queries=2
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=0
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=foo
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=501
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/update?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":2146,"randomNumber":9447},{"id":7"
+Accessing URL http://TFB-server:8080/update?queries=0:
+  Response (trimmed to 40 bytes): "[{"id":7038,"randomNumber":8014}]"
+Accessing URL http://TFB-server:8080/update?queries=foo:
+  Response (trimmed to 40 bytes): "[{"id":3142,"randomNumber":3869}]"
+Accessing URL http://TFB-server:8080/update?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":4788,"randomNumber":2424},{"id":5"
+Accessing URL http://TFB-server:8080/update?queries=:
+  Response (trimmed to 40 bytes): "[{"id":4720,"randomNumber":4425}]"
+   WARN for http://TFB-server:8080/update?queries=2
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=0
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=foo
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=501
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/fortunes:
+  Response (trimmed to 40 bytes): "<!DOCTYPE html>
+<html>
+<head>
+<title>For"
+   PASS for http://TFB-server:8080/fortunes
+
+gemini-postgres: start_postgresql.sh and framework processes have terminated
+Server gemini-postgres: Framework processes have terminated
+Failed verify!
+--------------------------------------------------------------------------------                               | Rough ETA:  00:02:31
+  Running Test: servlet-postgres-raw
+--------------------------------------------------------------------------------
+
+database connection test results:
+mysql: is GO!
+mongodb: is GO!
+postgresql: is GO!
+cassandra: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+elasticsearch: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:27:12 UTC 2017
+
+  System load:  1.02              Processes:           102
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 8%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+sudo: /etc/init.d/apache2: command not found
+INFO:root:Running setup module start (cwd=/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet)
+INFO:root:To run servlet-postgres-raw manually, copy/paste this:
+      export FWROOT=/home/vagrant/FrameworkBenchmarks          &&  \
+      export TROOT=/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet           &&  \
+      export IROOT=/home/vagrant/FrameworkBenchmarks/installs           &&  \
+      export DBHOST=127.0.0.1          &&  \
+      export LOGDIR=/home/vagrant/FrameworkBenchmarks/results/20170331152432/logs/servlet-postgres-raw          &&  \
+      export MAX_THREADS=8     &&  \
+      export MAX_CONCURRENCY=256 && \
+      cd /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet && \
+      /home/vagrant/FrameworkBenchmarks/installs/TFBReaper "bash -exc \"source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh && source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup_postgresql.sh\"
+Setup servlet-postgres-raw: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet-postgres-raw: ++ export DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-raw: ++ DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-raw: ++ FW_dep_error=0
+Setup servlet-postgres-raw: ++ FW_any_errors=0
+Setup servlet-postgres-raw: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup_postgresql.sh
+Setup servlet-postgres-raw: ++ fw_depends postgresql
+Setup servlet-postgres-raw: ++ set -E
+Setup servlet-postgres-raw: ++ for depend in '"$@"'
+Setup servlet-postgres-raw: +++ echo postgresql
+Setup servlet-postgres-raw: +++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: ++ depend=postgresql
+Setup servlet-postgres-raw: ++ echo Searching for postgresql
+Setup servlet-postgres-raw: Searching for postgresql
+Setup servlet-postgres-raw: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: ++ retcode=0
+Setup servlet-postgres-raw: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: +++ pwd
+Setup servlet-postgres-raw: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name postgresql.sh
+Setup servlet-postgres-raw: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh ]]
+Setup servlet-postgres-raw: ++ echo Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: ++ set -x
+Setup servlet-postgres-raw: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: +++ fw_depends databases
+Setup servlet-postgres-raw: +++ set -E
+Setup servlet-postgres-raw: +++ for depend in '"$@"'
+Setup servlet-postgres-raw: ++++ echo databases
+Setup servlet-postgres-raw: ++++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: +++ depend=databases
+Setup servlet-postgres-raw: +++ echo Searching for databases
+Setup servlet-postgres-raw: Searching for databases
+Setup servlet-postgres-raw: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: +++ retcode=0
+Setup servlet-postgres-raw: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: ++++ pwd
+Setup servlet-postgres-raw: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: +++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup servlet-postgres-raw: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup servlet-postgres-raw: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++ set -x
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-raw: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup servlet-postgres-raw: +++++ echo 0
+Setup servlet-postgres-raw: ++++ RETCODE=0
+Setup servlet-postgres-raw: ++++ '[' '!' 0 == 0 ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: databases is installed!
+Setup servlet-postgres-raw: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup servlet-postgres-raw: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:  * Documentation:  https://help.ubuntu.com/
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   System information as of Fri Mar 31 15:27:32 UTC 2017
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   System load:  1.33              Processes:           100
+Setup servlet-postgres-raw:   Usage of /:   9.0% of 39.34GB   Users logged in:     1
+Setup servlet-postgres-raw:   Memory usage: 8%                IP address for eth0: 10.0.2.15
+Setup servlet-postgres-raw:   Swap usage:   0%                IP address for eth1: 172.16.0.16
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   Graph this data and manage this system at:
+Setup servlet-postgres-raw:     https://landscape.canonical.com/
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw: New release '16.04.2 LTS' available.
+Setup servlet-postgres-raw: Run 'do-release-upgrade' to upgrade to it.
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw: Welcome to the FrameworkBenchmarks project!
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   To get started, perhaps try this:
+Setup servlet-postgres-raw:     $ cd FrameworkBenchmarks
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   You can get lots of help:
+Setup servlet-postgres-raw:     $ tfb --help
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   You can run a test like:
+Setup servlet-postgres-raw:     $ tfb --mode verify --test gemini
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   This Vagrant environment is already setup and ready to go.
+Setup servlet-postgres-raw: ERROR:  role "benchmarkdbuser" already exists
+Setup servlet-postgres-raw: NOTICE:  table "world" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "fortune" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "World" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "Fortune" does not exist, skipping
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: databases is installed!
+Setup servlet-postgres-raw: Searching for java
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ fw_installed java
+Setup servlet-postgres-raw: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-raw: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: Searching for resin
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-raw: ++++ fw_depends java
+Setup servlet-postgres-raw: ++++ set -E
+Setup servlet-postgres-raw: ++++ for depend in '"$@"'
+Setup servlet-postgres-raw: +++++ echo java
+Setup servlet-postgres-raw: +++++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: ++++ depend=java
+Setup servlet-postgres-raw: ++++ echo Searching for java
+Setup servlet-postgres-raw: Searching for java
+Setup servlet-postgres-raw: ++++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: ++++ retcode=0
+Setup servlet-postgres-raw: ++++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: +++++ pwd
+Setup servlet-postgres-raw: ++++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ++++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: +++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup servlet-postgres-raw: ++++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup servlet-postgres-raw: ++++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ set -x
+Setup servlet-postgres-raw: ++++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: +++++ fw_installed java
+Setup servlet-postgres-raw: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-raw: +++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-raw: ++++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: ++++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: ++++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ return 0
+Setup servlet-postgres-raw: +++++ return 0
+Setup servlet-postgres-raw: ++++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: Searching for maven
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-raw: ++++ fw_installed maven
+Setup servlet-postgres-raw: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet-postgres-raw: +++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: maven is installed!
+Setup servlet-postgres-raw: [INFO] Scanning for projects...
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-raw: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 64, column 12
+Setup servlet-postgres-raw: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 74, column 12
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet-postgres-raw: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet-postgres-raw: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet-postgres-raw: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet-postgres-raw: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet-postgres-raw: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet-postgres-raw: [INFO] Packaging webapp
+Setup servlet-postgres-raw: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet-postgres-raw: [INFO] Processing war project
+Setup servlet-postgres-raw: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet-postgres-raw: [INFO] Webapp assembled in [2061 msecs]
+Setup servlet-postgres-raw: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet-postgres-raw: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] BUILD SUCCESS
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] Total time: 22.574 s
+Setup servlet-postgres-raw: [INFO] Finished at: 2017-03-31T15:28:07+00:00
+Setup servlet-postgres-raw: [INFO] Final Memory: 15M/142M
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup servlet-postgres-raw: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet-postgres-raw: Status: Poll: None, Port 8080 bound: True, Time Left: 1:43:55.305916
+Setup servlet-postgres-raw: Bound port detected on 8080
+INFO:root:Executed setup_postgresql.sh, returning 0
+INFO:root:Sleeping 60 seconds to ensure framework is ready
+INFO:root:Verifying framework URLs
+Accessing URL http://TFB-server:8080/servlet/postgres:
+  Response (trimmed to 40 bytes): "{"id":3055,"randomNumber":5858}"
+   PASS for http://TFB-server:8080/servlet/postgres
+
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":1131,"randomNumber":3664},{"id":8"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=0:
+  Response (trimmed to 40 bytes): "{"id":9121,"randomNumber":2781}"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=foo:
+  Response (trimmed to 40 bytes): "{"id":1133,"randomNumber":5078}"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":248,"randomNumber":103},{"id":661"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=:
+  Response (trimmed to 40 bytes): "{"id":1851,"randomNumber":9625}"
+   WARN for http://TFB-server:8080/servlet/postgres?queries=0
+
+     Top-level JSON is an object, not an array
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/servlet/postgres?queries=foo
+
+     Top-level JSON is an object, not an array
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/servlet/postgres?queries=
+
+     Top-level JSON is an object, not an array
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":944,"randomNumber":6140},{"id":43"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=0:
+  Response (trimmed to 40 bytes): "[{"id":4297,"randomNumber":7651}]"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=foo:
+  Response (trimmed to 40 bytes): "[{"id":5422,"randomNumber":5708}]"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":5125,"randomNumber":2133},{"id":4"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=:
+  Response (trimmed to 40 bytes): "[{"id":7351,"randomNumber":1340}]"
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=2
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=0
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=foo
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=501
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=
+
+Accessing URL http://TFB-server:8080/servlet/postgres-fortunes:
+  Response (trimmed to 40 bytes): "<!DOCTYPE html>
+<html>
+<head>
+<title>For"
+   PASS for http://TFB-server:8080/servlet/postgres-fortunes
+
+servlet-postgres-raw: setup_postgresql.sh and framework processes have terminated
+Server servlet-postgres-raw: Framework processes have terminated
+verify: 100% |#################################################################################################| Rough Time: 00:05:13
+================================================================================
+  Verification Summary
+
+| Test: gemini-postgres
+|       query       : WARN
+|       db          : FAIL
+|       update      : WARN
+|       fortune     : PASS
+| Test: servlet-postgres-raw
+|       query       : WARN
+|       db          : PASS
+|       update      : PASS
+|       fortune     : PASS
+================================================================================
+
+Time to complete: 322 seconds
+Results are saved in /home/vagrant/FrameworkBenchmarks/results/20170331152432
+vagrant@tfb-all:~/FrameworkBenchmarks$ tfb --mode verify --test gemini-postgres servlet-postgres-raw
+FWROOT is /home/vagrant/FrameworkBenchmarks.
+WARNING:root:results.json for test not found.
+================================================================================
+  Preparing Server, Database, and Client ...
+================================================================================
+
+net.ipv4.tcp_max_syn_backlog = 65535
+net.core.somaxconn = 65535
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+kernel.shmmax = 134217728
+kernel.shmall = 2097152
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:27:33 UTC 2017
+
+  System load:  1.55              Processes:           102
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 8%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+net.ipv4.tcp_max_syn_backlog = 65535
+net.core.somaxconn = 65535
+kernel.sched_autogroup_enabled = 0
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+kernel.shmmax = 2147483648
+kernel.shmall = 2097152
+kernel.sem = 250 32000 256 512
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:46:08 UTC 2017
+
+  System load:  0.16              Processes:           98
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 9%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+net.ipv4.tcp_max_syn_backlog = 65535
+net.core.somaxconn = 65535
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+kernel.shmmax = 2147483648
+kernel.shmall = 2097152
+================================================================================
+  Running Tests...
+================================================================================
+
+--------------------------------------------------------------------------------                               | Rough ETA:  --:--:--
+  Running Test: gemini-postgres
+--------------------------------------------------------------------------------
+
+database connection test results:
+mysql: is GO!
+mongodb: is GO!
+postgresql: is GO!
+cassandra: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+elasticsearch: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:46:11 UTC 2017
+
+  System load:  0.22              Processes:           99
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 9%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+sudo: /etc/init.d/apache2: command not found
+INFO:root:Running setup module start (cwd=/home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini)
+INFO:root:To run gemini-postgres manually, copy/paste this:
+      export FWROOT=/home/vagrant/FrameworkBenchmarks          &&  \
+      export TROOT=/home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini           &&  \
+      export IROOT=/home/vagrant/FrameworkBenchmarks/installs           &&  \
+      export DBHOST=127.0.0.1          &&  \
+      export LOGDIR=/home/vagrant/FrameworkBenchmarks/results/20170331154604/logs/gemini-postgres          &&  \
+      export MAX_THREADS=8     &&  \
+      export MAX_CONCURRENCY=256 && \
+      cd /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini && \
+      /home/vagrant/FrameworkBenchmarks/installs/TFBReaper "bash -exc \"source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh && source /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/start_postgresql.sh\"
+Setup gemini-postgres: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup gemini-postgres: ++ export DEBIAN_FRONTEND=noninteractive
+Setup gemini-postgres: ++ DEBIAN_FRONTEND=noninteractive
+Setup gemini-postgres: ++ FW_dep_error=0
+Setup gemini-postgres: ++ FW_any_errors=0
+Setup gemini-postgres: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/start_postgresql.sh
+Setup gemini-postgres: ++ fw_depends postgresql java ant resin maven
+Setup gemini-postgres: ++ set -E
+Setup gemini-postgres: ++ for depend in '"$@"'
+Setup gemini-postgres: +++ awk '{print tolower($0)}'
+Setup gemini-postgres: +++ echo postgresql
+Setup gemini-postgres: ++ depend=postgresql
+Setup gemini-postgres: ++ echo Searching for postgresql
+Setup gemini-postgres: Searching for postgresql
+Setup gemini-postgres: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: ++ retcode=0
+Setup gemini-postgres: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: +++ pwd
+Setup gemini-postgres: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name postgresql.sh
+Setup gemini-postgres: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh ]]
+Setup gemini-postgres: ++ echo Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: ++ set -x
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup gemini-postgres: +++ fw_depends databases
+Setup gemini-postgres: +++ set -E
+Setup gemini-postgres: +++ for depend in '"$@"'
+Setup gemini-postgres: ++++ awk '{print tolower($0)}'
+Setup gemini-postgres: ++++ echo databases
+Setup gemini-postgres: +++ depend=databases
+Setup gemini-postgres: +++ echo Searching for databases
+Setup gemini-postgres: Searching for databases
+Setup gemini-postgres: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: +++ retcode=0
+Setup gemini-postgres: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ++++ pwd
+Setup gemini-postgres: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: +++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup gemini-postgres: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup gemini-postgres: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++ set -x
+Setup gemini-postgres: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup gemini-postgres: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup gemini-postgres: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup gemini-postgres: +++++ echo 0
+Setup gemini-postgres: ++++ RETCODE=0
+Setup gemini-postgres: ++++ '[' '!' 0 == 0 ']'
+Setup gemini-postgres: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: +++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: databases is installed!
+Setup gemini-postgres: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup gemini-postgres: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+Setup gemini-postgres:
+Setup gemini-postgres:  * Documentation:  https://help.ubuntu.com/
+Setup gemini-postgres:
+Setup gemini-postgres:   System information as of Fri Mar 31 15:46:31 UTC 2017
+Setup gemini-postgres:
+Setup gemini-postgres:   System load:  0.23              Processes:           100
+Setup gemini-postgres:   Usage of /:   9.0% of 39.34GB   Users logged in:     1
+Setup gemini-postgres:   Memory usage: 8%                IP address for eth0: 10.0.2.15
+Setup gemini-postgres:   Swap usage:   0%                IP address for eth1: 172.16.0.16
+Setup gemini-postgres:
+Setup gemini-postgres:   Graph this data and manage this system at:
+Setup gemini-postgres:     https://landscape.canonical.com/
+Setup gemini-postgres:
+Setup gemini-postgres: New release '16.04.2 LTS' available.
+Setup gemini-postgres: Run 'do-release-upgrade' to upgrade to it.
+Setup gemini-postgres:
+Setup gemini-postgres:
+Setup gemini-postgres: Welcome to the FrameworkBenchmarks project!
+Setup gemini-postgres:
+Setup gemini-postgres:   To get started, perhaps try this:
+Setup gemini-postgres:     $ cd FrameworkBenchmarks
+Setup gemini-postgres:
+Setup gemini-postgres:   You can get lots of help:
+Setup gemini-postgres:     $ tfb --help
+Setup gemini-postgres:
+Setup gemini-postgres:   You can run a test like:
+Setup gemini-postgres:     $ tfb --mode verify --test gemini
+Setup gemini-postgres:
+Setup gemini-postgres:   This Vagrant environment is already setup and ready to go.
+Setup gemini-postgres: ERROR:  role "benchmarkdbuser" already exists
+Setup gemini-postgres: NOTICE:  table "world" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "fortune" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "World" does not exist, skipping
+Setup gemini-postgres: NOTICE:  table "Fortune" does not exist, skipping
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: databases is installed!
+Setup gemini-postgres: Searching for java
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ fw_installed java
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup gemini-postgres: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: Searching for ant
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: ant from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/ant.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/ant.sh
+Setup gemini-postgres: +++ fw_installed ant
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/ant.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/ant.installed
+Setup gemini-postgres: ++++ export PATH=/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ant is installed!
+Setup gemini-postgres: Searching for resin
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup gemini-postgres: +++ fw_depends java
+Setup gemini-postgres: +++ set -E
+Setup gemini-postgres: +++ for depend in '"$@"'
+Setup gemini-postgres: ++++ echo java
+Setup gemini-postgres: ++++ awk '{print tolower($0)}'
+Setup gemini-postgres: +++ depend=java
+Setup gemini-postgres: +++ echo Searching for java
+Setup gemini-postgres: Searching for java
+Setup gemini-postgres: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup gemini-postgres: +++ retcode=0
+Setup gemini-postgres: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: ++++ pwd
+Setup gemini-postgres: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup gemini-postgres: +++ relative_wd='$FWROOT/installs'
+Setup gemini-postgres: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup gemini-postgres: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup gemini-postgres: +++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: +++ set -x
+Setup gemini-postgres: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup gemini-postgres: ++++ fw_installed java
+Setup gemini-postgres: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup gemini-postgres: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup gemini-postgres: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup gemini-postgres: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: ++++ return 0
+Setup gemini-postgres: +++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: java is installed!
+Setup gemini-postgres: Searching for maven
+Setup gemini-postgres: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup gemini-postgres: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup gemini-postgres: +++ fw_installed maven
+Setup gemini-postgres: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup gemini-postgres: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup gemini-postgres: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/share/ant/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: +++ return 0
+Setup gemini-postgres: ++ set +x
+Setup gemini-postgres: ~/FrameworkBenchmarks/frameworks/Java/gemini
+Setup gemini-postgres: maven is installed!
+Setup gemini-postgres: Buildfile: /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/build.xml
+Setup gemini-postgres:
+Setup gemini-postgres: compile:
+Setup gemini-postgres:     [javac] /home/vagrant/FrameworkBenchmarks/frameworks/Java/gemini/build.xml:25: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+Setup gemini-postgres:
+Setup gemini-postgres: BUILD SUCCESSFUL
+Setup gemini-postgres: Total time: 2 seconds
+Setup gemini-postgres: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup gemini-postgres: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup gemini-postgres: Status: Poll: None, Port 8080 bound: True, Time Left: 1:44:18.189887
+Setup gemini-postgres: Bound port detected on 8080
+INFO:root:Executed start_postgresql.sh, returning 0
+INFO:root:Sleeping 60 seconds to ensure framework is ready
+INFO:root:Verifying framework URLs
+Accessing URL http://TFB-server:8080/db:
+  Response (trimmed to 40 bytes): "{"id":7747,"randomNumber":8968}"
+   WARN for http://TFB-server:8080/db
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/query?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":4956,"randomNumber":1228},{"id":2"
+Accessing URL http://TFB-server:8080/query?queries=0:
+  Response (trimmed to 40 bytes): "[{"id":7752,"randomNumber":499}]"
+Accessing URL http://TFB-server:8080/query?queries=foo:
+  Response (trimmed to 40 bytes): "[{"id":5082,"randomNumber":9039}]"
+Accessing URL http://TFB-server:8080/query?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":1493,"randomNumber":7635},{"id":9"
+Accessing URL http://TFB-server:8080/query?queries=:
+  Response (trimmed to 40 bytes): "[{"id":4492,"randomNumber":3446}]"
+   WARN for http://TFB-server:8080/query?queries=2
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=0
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=foo
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=501
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/query?queries=
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/update?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":7022,"randomNumber":5353},{"id":6"
+Accessing URL http://TFB-server:8080/update?queries=0:
+  Response (trimmed to 40 bytes): "[{"id":1973,"randomNumber":3580}]"
+Accessing URL http://TFB-server:8080/update?queries=foo:
+  Response (trimmed to 40 bytes): "[{"id":8894,"randomNumber":4204}]"
+Accessing URL http://TFB-server:8080/update?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":4400,"randomNumber":4566},{"id":7"
+Accessing URL http://TFB-server:8080/update?queries=:
+  Response (trimmed to 40 bytes): "[{"id":958,"randomNumber":5307}]"
+   WARN for http://TFB-server:8080/update?queries=2
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=0
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=foo
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=501
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/update?queries=
+
+     Content encoding found in "application/json; charset=UTF-8" where "application/json" is acceptable.
+     Additional response bytes may negatively affect benchmark performance.
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/fortunes:
+  Response (trimmed to 40 bytes): "<!DOCTYPE html>
+<html>
+<head>
+<title>For"
+   PASS for http://TFB-server:8080/fortunes
+
+gemini-postgres: start_postgresql.sh and framework processes have terminated
+Server gemini-postgres: Framework processes have terminated
+--------------------------------------------------------------------------------                               | Rough ETA:  00:02:23
+  Running Test: servlet-postgres-raw
+--------------------------------------------------------------------------------
+
+database connection test results:
+mysql: is GO!
+mongodb: is GO!
+postgresql: is GO!
+cassandra: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+elasticsearch: is _NO_ GO!: ERROR: [Errno 111] Connection refused
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 31 15:48:35 UTC 2017
+
+  System load:  1.17              Processes:           101
+  Usage of /:   9.0% of 39.34GB   Users logged in:     1
+  Memory usage: 8%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+sudo: /etc/init.d/apache2: command not found
+INFO:root:Running setup module start (cwd=/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet)
+INFO:root:To run servlet-postgres-raw manually, copy/paste this:
+      export FWROOT=/home/vagrant/FrameworkBenchmarks          &&  \
+      export TROOT=/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet           &&  \
+      export IROOT=/home/vagrant/FrameworkBenchmarks/installs           &&  \
+      export DBHOST=127.0.0.1          &&  \
+      export LOGDIR=/home/vagrant/FrameworkBenchmarks/results/20170331154604/logs/servlet-postgres-raw          &&  \
+      export MAX_THREADS=8     &&  \
+      export MAX_CONCURRENCY=256 && \
+      cd /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet && \
+      /home/vagrant/FrameworkBenchmarks/installs/TFBReaper "bash -exc \"source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh && source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup_postgresql.sh\"
+Setup servlet-postgres-raw: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet-postgres-raw: ++ export DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-raw: ++ DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-raw: ++ FW_dep_error=0
+Setup servlet-postgres-raw: ++ FW_any_errors=0
+Setup servlet-postgres-raw: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup_postgresql.sh
+Setup servlet-postgres-raw: ++ fw_depends postgresql
+Setup servlet-postgres-raw: ++ set -E
+Setup servlet-postgres-raw: ++ for depend in '"$@"'
+Setup servlet-postgres-raw: +++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: +++ echo postgresql
+Setup servlet-postgres-raw: ++ depend=postgresql
+Setup servlet-postgres-raw: ++ echo Searching for postgresql
+Setup servlet-postgres-raw: Searching for postgresql
+Setup servlet-postgres-raw: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: ++ retcode=0
+Setup servlet-postgres-raw: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: +++ pwd
+Setup servlet-postgres-raw: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name postgresql.sh
+Setup servlet-postgres-raw: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh ]]
+Setup servlet-postgres-raw: ++ echo Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: ++ set -x
+Setup servlet-postgres-raw: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-raw: +++ fw_depends databases
+Setup servlet-postgres-raw: +++ set -E
+Setup servlet-postgres-raw: +++ for depend in '"$@"'
+Setup servlet-postgres-raw: ++++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: ++++ echo databases
+Setup servlet-postgres-raw: +++ depend=databases
+Setup servlet-postgres-raw: +++ echo Searching for databases
+Setup servlet-postgres-raw: Searching for databases
+Setup servlet-postgres-raw: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: +++ retcode=0
+Setup servlet-postgres-raw: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: ++++ pwd
+Setup servlet-postgres-raw: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: +++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup servlet-postgres-raw: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup servlet-postgres-raw: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++ set -x
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-raw: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-raw: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup servlet-postgres-raw: +++++ echo 0
+Setup servlet-postgres-raw: ++++ RETCODE=0
+Setup servlet-postgres-raw: ++++ '[' '!' 0 == 0 ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: databases is installed!
+Setup servlet-postgres-raw: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup servlet-postgres-raw: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:  * Documentation:  https://help.ubuntu.com/
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   System information as of Fri Mar 31 15:48:55 UTC 2017
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   System load:  0.9               Processes:           101
+Setup servlet-postgres-raw:   Usage of /:   9.0% of 39.34GB   Users logged in:     1
+Setup servlet-postgres-raw:   Memory usage: 8%                IP address for eth0: 10.0.2.15
+Setup servlet-postgres-raw:   Swap usage:   0%                IP address for eth1: 172.16.0.16
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   Graph this data and manage this system at:
+Setup servlet-postgres-raw:     https://landscape.canonical.com/
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw: New release '16.04.2 LTS' available.
+Setup servlet-postgres-raw: Run 'do-release-upgrade' to upgrade to it.
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw: Welcome to the FrameworkBenchmarks project!
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   To get started, perhaps try this:
+Setup servlet-postgres-raw:     $ cd FrameworkBenchmarks
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   You can get lots of help:
+Setup servlet-postgres-raw:     $ tfb --help
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   You can run a test like:
+Setup servlet-postgres-raw:     $ tfb --mode verify --test gemini
+Setup servlet-postgres-raw:
+Setup servlet-postgres-raw:   This Vagrant environment is already setup and ready to go.
+Setup servlet-postgres-raw: ERROR:  role "benchmarkdbuser" already exists
+Setup servlet-postgres-raw: NOTICE:  table "world" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "fortune" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "World" does not exist, skipping
+Setup servlet-postgres-raw: NOTICE:  table "Fortune" does not exist, skipping
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: databases is installed!
+Setup servlet-postgres-raw: Searching for java
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ fw_installed java
+Setup servlet-postgres-raw: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-raw: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: Searching for resin
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-raw: ++++ fw_depends java
+Setup servlet-postgres-raw: ++++ set -E
+Setup servlet-postgres-raw: ++++ for depend in '"$@"'
+Setup servlet-postgres-raw: +++++ awk '{print tolower($0)}'
+Setup servlet-postgres-raw: +++++ echo java
+Setup servlet-postgres-raw: ++++ depend=java
+Setup servlet-postgres-raw: ++++ echo Searching for java
+Setup servlet-postgres-raw: Searching for java
+Setup servlet-postgres-raw: ++++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-raw: ++++ retcode=0
+Setup servlet-postgres-raw: ++++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: +++++ pwd
+Setup servlet-postgres-raw: ++++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-raw: ++++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-raw: +++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup servlet-postgres-raw: ++++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup servlet-postgres-raw: ++++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: ++++ set -x
+Setup servlet-postgres-raw: ++++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-raw: +++++ fw_installed java
+Setup servlet-postgres-raw: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-raw: +++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-raw: ++++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: ++++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-raw: ++++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ return 0
+Setup servlet-postgres-raw: +++++ return 0
+Setup servlet-postgres-raw: ++++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: java is installed!
+Setup servlet-postgres-raw: Searching for maven
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-raw: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-raw: ++++ fw_installed maven
+Setup servlet-postgres-raw: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet-postgres-raw: ++++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet-postgres-raw: +++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: +++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: ++++ return 0
+Setup servlet-postgres-raw: +++ set +x
+Setup servlet-postgres-raw: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-raw: maven is installed!
+Setup servlet-postgres-raw: [INFO] Scanning for projects...
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-raw: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 64, column 12
+Setup servlet-postgres-raw: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 74, column 12
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet-postgres-raw: [WARNING]
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet-postgres-raw: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet-postgres-raw: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet-postgres-raw: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet-postgres-raw: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet-postgres-raw: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet-postgres-raw: [INFO]
+Setup servlet-postgres-raw: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet-postgres-raw: [INFO] Packaging webapp
+Setup servlet-postgres-raw: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet-postgres-raw: [INFO] Processing war project
+Setup servlet-postgres-raw: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet-postgres-raw: [INFO] Webapp assembled in [2205 msecs]
+Setup servlet-postgres-raw: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet-postgres-raw: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] BUILD SUCCESS
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: [INFO] Total time: 20.101 s
+Setup servlet-postgres-raw: [INFO] Finished at: 2017-03-31T15:49:27+00:00
+Setup servlet-postgres-raw: [INFO] Final Memory: 15M/142M
+Setup servlet-postgres-raw: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-raw: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup servlet-postgres-raw: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet-postgres-raw: Status: Poll: None, Port 8080 bound: True, Time Left: 1:43:58.983444
+Setup servlet-postgres-raw: Bound port detected on 8080
+INFO:root:Executed setup_postgresql.sh, returning 0
+INFO:root:Sleeping 60 seconds to ensure framework is ready
+INFO:root:Verifying framework URLs
+Accessing URL http://TFB-server:8080/servlet/postgres:
+  Response (trimmed to 40 bytes): "{"id":4421,"randomNumber":5310}"
+   PASS for http://TFB-server:8080/servlet/postgres
+
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":5956,"randomNumber":6240},{"id":9"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=0:
+  Response (trimmed to 40 bytes): "{"id":1133,"randomNumber":1996}"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=foo:
+  Response (trimmed to 40 bytes): "{"id":5412,"randomNumber":9730}"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":9624,"randomNumber":9403},{"id":8"
+Accessing URL http://TFB-server:8080/servlet/postgres?queries=:
+  Response (trimmed to 40 bytes): "{"id":6543,"randomNumber":408}"
+   WARN for http://TFB-server:8080/servlet/postgres?queries=0
+
+     Top-level JSON is an object, not an array
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/servlet/postgres?queries=foo
+
+     Top-level JSON is an object, not an array
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+   WARN for http://TFB-server:8080/servlet/postgres?queries=
+
+     Top-level JSON is an object, not an array
+     See http://frameworkbenchmarks.readthedocs.org/en/latest/Project-Information/Framework-Tests/#specific-test-requirements
+
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=2:
+  Response (trimmed to 40 bytes): "[{"id":9617,"randomNumber":7705},{"id":7"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=0:
+  Response (trimmed to 40 bytes): "[{"id":4783,"randomNumber":4732}]"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=foo:
+  Response (trimmed to 40 bytes): "[{"id":9354,"randomNumber":78}]"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=501:
+  Response (trimmed to 40 bytes): "[{"id":6501,"randomNumber":7805},{"id":8"
+Accessing URL http://TFB-server:8080/servlet/postgres-update?queries=:
+  Response (trimmed to 40 bytes): "[{"id":575,"randomNumber":7087}]"
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=2
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=0
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=foo
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=501
+
+   PASS for http://TFB-server:8080/servlet/postgres-update?queries=
+
+Accessing URL http://TFB-server:8080/servlet/postgres-fortunes:
+  Response (trimmed to 40 bytes): "<!DOCTYPE html>
+<html>
+<head>
+<title>For"
+   PASS for http://TFB-server:8080/servlet/postgres-fortunes
+
+servlet-postgres-raw: setup_postgresql.sh and framework processes have terminated
+Server servlet-postgres-raw: Framework processes have terminated
+verify: 100% |#################################################################################################| Rough Time: 00:05:02
+================================================================================
+  Verification Summary
+
+| Test: gemini-postgres
+|       query       : WARN
+|       db          : WARN
+|       update      : WARN
+|       fortune     : PASS
+| Test: servlet-postgres-raw
+|       query       : WARN
+|       db          : PASS
+|       update      : PASS
+|       fortune     : PASS
+================================================================================
+
+Time to complete: 311 seconds
+Results are saved in /home/vagrant/FrameworkBenchmarks/results/20170331154604
+vagrant@tfb-all:~/FrameworkBenchmarks$
+
