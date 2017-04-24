@@ -1,0 +1,5 @@
+--------------------------------------------------------------------------------
+  VERIFYING DB
+--------------------------------------------------------------------------------
+Accessing URL http://TFB-server:8080/servlet/postgres 
+CaseInsensitiveDict({'date': 'Sun, 23 Apr 2017 18:26:07 GMT', 'content-length': '31', 'content-type': 'application/json', 'server': 'Resin/4.0.48'}){"id":2045,"randomNumber":2601}   [32mPASS[0m for http://TFB-server:8080/servlet/postgres

@@ -1,0 +1,174 @@
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 2.0
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+
+---------------------------------------------------------
+ Running Primer servlet-postgres-v42
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 5 -c 8 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-update?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://TFB-server:8080/servlet/postgres-update?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    29.57ms   22.96ms 185.32ms   83.37%
+    Req/Sec    37.27     17.80    90.00     69.67%
+  Latency Distribution
+     50%   22.35ms
+     75%   39.88ms
+     90%   61.22ms
+     99%  107.93ms
+  1506 requests in 5.10s, 286.13KB read
+Requests/sec:    295.57
+Transfer/sec:     56.16KB
+
+---------------------------------------------------------
+ Running Warmup servlet-postgres-v42
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-update?queries=2
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-update?queries=2
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   797.45ms  750.35ms   7.11s    83.04%
+    Req/Sec    49.36     35.89   377.00     73.87%
+  Latency Distribution
+     50%  559.09ms
+     75%    1.06s 
+     90%    1.77s 
+     99%    3.53s 
+  22152 requests in 1.00m, 4.07MB read
+Requests/sec:    368.74
+Transfer/sec:     69.38KB
+
+---------------------------------------------------------
+ Synchronizing time
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+ Queries: 1 for servlet-postgres-v42
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-update?queries=1
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-update?queries=1
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   388.92ms  355.78ms   3.55s    76.28%
+    Req/Sec    95.88     77.82   666.00     76.63%
+  Latency Distribution
+     50%  297.08ms
+     75%  545.55ms
+     90%  849.47ms
+     99%    1.61s 
+  39014 requests in 1.00m, 6.04MB read
+Requests/sec:    649.00
+Transfer/sec:    102.85KB
+STARTTIME 1492974742
+ENDTIME 1492974802
+
+---------------------------------------------------------
+ Queries: 5 for servlet-postgres-v42
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-update?queries=5
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-update?queries=5
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.54s     1.33s    7.95s    79.99%
+    Req/Sec    24.74     17.23   151.00     82.59%
+  Latency Distribution
+     50%    1.07s 
+     75%    2.10s 
+     90%    3.39s 
+     99%    6.10s 
+  11062 requests in 1.00m, 2.94MB read
+  Socket errors: connect 0, read 0, write 0, timeout 36
+Requests/sec:    184.04
+Transfer/sec:     50.12KB
+STARTTIME 1492974804
+ENDTIME 1492974865
+
+---------------------------------------------------------
+ Queries: 10 for servlet-postgres-v42
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-update?queries=10
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-update?queries=10
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.20s     1.67s    8.00s    73.57%
+    Req/Sec    15.18     10.96    89.00     74.04%
+  Latency Distribution
+     50%    1.64s 
+     75%    3.08s 
+     90%    4.66s 
+     99%    7.28s 
+  6299 requests in 1.00m, 2.40MB read
+  Socket errors: connect 0, read 0, write 0, timeout 197
+Requests/sec:    104.82
+Transfer/sec:     40.83KB
+STARTTIME 1492974867
+ENDTIME 1492974929
+
+---------------------------------------------------------
+ Queries: 15 for servlet-postgres-v42
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-update?queries=15
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-update?queries=15
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.53s     1.79s    8.00s    69.28%
+    Req/Sec    11.75      8.47    80.00     82.35%
+  Latency Distribution
+     50%    2.10s 
+     75%    3.50s 
+     90%    5.19s 
+     99%    7.57s 
+  4589 requests in 1.00m, 2.19MB read
+  Socket errors: connect 0, read 0, write 0, timeout 344
+Requests/sec:     76.36
+Transfer/sec:     37.34KB
+STARTTIME 1492974931
+ENDTIME 1492974994
+
+---------------------------------------------------------
+ Queries: 20 for servlet-postgres-v42
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-update?queries=20
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-update?queries=20
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.67s     1.89s    7.99s    65.29%
+    Req/Sec    10.60      7.88    80.00     74.21%
+  Latency Distribution
+     50%    2.36s 
+     75%    3.62s 
+     90%    5.57s 
+     99%    7.76s 
+  3928 requests in 1.00m, 2.20MB read
+  Socket errors: connect 0, read 0, write 0, timeout 396
+Requests/sec:     65.38
+Transfer/sec:     37.47KB
+STARTTIME 1492974996
+ENDTIME 1492975058

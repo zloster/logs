@@ -1,0 +1,191 @@
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 2.0
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+
+---------------------------------------------------------
+ Running Primer servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 5 -c 8 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.25ms   14.27ms 118.92ms   86.01%
+    Req/Sec    99.78     46.97   340.00     66.67%
+  Latency Distribution
+     50%    7.73ms
+     75%   19.06ms
+     90%   32.17ms
+     99%   64.90ms
+  3995 requests in 5.06s, 5.52MB read
+Requests/sec:    789.55
+Transfer/sec:      1.09MB
+
+---------------------------------------------------------
+ Running Warmup servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   146.03ms  159.93ms   1.28s    84.17%
+    Req/Sec   185.10    161.36     0.99k    80.94%
+  Latency Distribution
+     50%   75.68ms
+     75%  234.67ms
+     90%  371.66ms
+     99%  667.24ms
+  66498 requests in 1.00m, 91.82MB read
+Requests/sec:   1106.12
+Transfer/sec:      1.53MB
+
+---------------------------------------------------------
+ Synchronizing time
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+ Concurrency: 8 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 60 -c 8 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.59ms   11.28ms 217.50ms   87.94%
+    Req/Sec   137.80     49.48   350.00     69.72%
+  Latency Distribution
+     50%    5.33ms
+     75%   13.18ms
+     90%   22.81ms
+     99%   47.41ms
+  65842 requests in 1.00m, 90.92MB read
+Requests/sec:   1095.64
+Transfer/sec:      1.51MB
+STARTTIME 1492973291
+ENDTIME 1492973351
+
+---------------------------------------------------------
+ Concurrency: 16 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 60 -c 16 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.05ms   23.56ms 221.38ms   85.02%
+    Req/Sec   146.60     58.58   410.00     69.32%
+  Latency Distribution
+     50%    9.40ms
+     75%   31.19ms
+     90%   52.47ms
+     99%  102.11ms
+  69879 requests in 1.00m, 96.50MB read
+Requests/sec:   1162.70
+Transfer/sec:      1.61MB
+STARTTIME 1492973353
+ENDTIME 1492973413
+
+---------------------------------------------------------
+ Concurrency: 32 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 60 -c 32 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    39.47ms   49.21ms 461.89ms   84.70%
+    Req/Sec   156.60     87.16   564.00     69.32%
+  Latency Distribution
+     50%   12.89ms
+     75%   64.10ms
+     90%  108.00ms
+     99%  207.46ms
+  71241 requests in 1.00m, 98.38MB read
+Requests/sec:   1186.04
+Transfer/sec:      1.64MB
+STARTTIME 1492973415
+ENDTIME 1492973475
+
+---------------------------------------------------------
+ Concurrency: 64 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 60 -c 64 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.56ms   71.73ms 629.81ms   84.47%
+    Req/Sec   176.93    128.91   797.00     74.01%
+  Latency Distribution
+     50%   13.67ms
+     75%   95.22ms
+     90%  157.10ms
+     99%  298.40ms
+  75269 requests in 1.00m, 103.94MB read
+Requests/sec:   1252.39
+Transfer/sec:      1.73MB
+STARTTIME 1492973477
+ENDTIME 1492973537
+
+---------------------------------------------------------
+ Concurrency: 128 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 60 -c 128 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    81.23ms  101.36ms 889.03ms   84.21%
+    Req/Sec   193.65    166.74     1.02k    81.14%
+  Latency Distribution
+     50%   21.93ms
+     75%  137.90ms
+     90%  220.80ms
+     99%  420.31ms
+  75532 requests in 1.00m, 104.30MB read
+Requests/sec:   1256.71
+Transfer/sec:      1.74MB
+STARTTIME 1492973539
+ENDTIME 1492973600
+
+---------------------------------------------------------
+ Concurrency: 256 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres-fortunes
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres-fortunes
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   136.74ms  156.77ms   2.26s    84.98%
+    Req/Sec   200.85    171.10     1.18k    80.06%
+  Latency Distribution
+     50%   67.06ms
+     75%  217.49ms
+     90%  348.36ms
+     99%  669.40ms
+  75225 requests in 1.00m, 103.88MB read
+Requests/sec:   1250.79
+Transfer/sec:      1.73MB
+STARTTIME 1492973602
+ENDTIME 1492973662

@@ -1,0 +1,267 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servlet-postgres-v42
+self.results['completed']: {u'servlet': u'20170423185430'}
+================================================================================
+  Beginning servlet-postgres-v42
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Starting servlet-postgres-v42
+--------------------------------------------------------------------------------
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 2.0
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+restart: Unknown job: mysql
+restart: Unknown job: mongod
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+cassandra: unrecognized service
+-bash: line 6: /opt/elasticsearch/elasticsearch: No such file or directory
+Setup servlet-postgres-v42: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet-postgres-v42: ++ export DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-v42: ++ DEBIAN_FRONTEND=noninteractive
+Setup servlet-postgres-v42: ++ FW_dep_error=0
+Setup servlet-postgres-v42: ++ FW_any_errors=0
+Setup servlet-postgres-v42: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup_v42.sh
+Setup servlet-postgres-v42: ++ sed -i 's|localhost|127.0.0.1|g' src/main/webapp/WEB-INF/resin-web.xml
+Setup servlet-postgres-v42: ++ fw_depends java resin maven postgresql
+Setup servlet-postgres-v42: ++ set -E
+Setup servlet-postgres-v42: ++ for depend in '"$@"'
+Setup servlet-postgres-v42: +++ awk '{print tolower($0)}'
+Setup servlet-postgres-v42: +++ echo java
+Setup servlet-postgres-v42: ++ depend=java
+Setup servlet-postgres-v42: ++ echo Searching for java
+Setup servlet-postgres-v42: Searching for java
+Setup servlet-postgres-v42: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-v42: ++ retcode=0
+Setup servlet-postgres-v42: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: +++ pwd
+Setup servlet-postgres-v42: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-v42: ++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-v42: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup servlet-postgres-v42: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup servlet-postgres-v42: ++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: ++ set -x
+Setup servlet-postgres-v42: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: +++ fw_installed java
+Setup servlet-postgres-v42: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-v42: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-v42: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-v42: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-v42: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-v42: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-v42: ++++ export 'JAVA_OPTS_TFB=-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet-postgres-v42: ++++ JAVA_OPTS_TFB='-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet-postgres-v42: +++ return 0
+Setup servlet-postgres-v42: +++ return 0
+Setup servlet-postgres-v42: ++ set +x
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: java is installed!
+Setup servlet-postgres-v42: Searching for resin
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-v42: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet-postgres-v42: +++ fw_depends java
+Setup servlet-postgres-v42: +++ set -E
+Setup servlet-postgres-v42: +++ for depend in '"$@"'
+Setup servlet-postgres-v42: ++++ echo java
+Setup servlet-postgres-v42: ++++ awk '{print tolower($0)}'
+Setup servlet-postgres-v42: +++ depend=java
+Setup servlet-postgres-v42: +++ echo Searching for java
+Setup servlet-postgres-v42: Searching for java
+Setup servlet-postgres-v42: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-v42: +++ retcode=0
+Setup servlet-postgres-v42: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: ++++ pwd
+Setup servlet-postgres-v42: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-v42: +++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-v42: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup servlet-postgres-v42: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup servlet-postgres-v42: +++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: +++ set -x
+Setup servlet-postgres-v42: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet-postgres-v42: ++++ fw_installed java
+Setup servlet-postgres-v42: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet-postgres-v42: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet-postgres-v42: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-v42: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet-postgres-v42: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-v42: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-v42: +++++ export 'JAVA_OPTS_TFB=-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet-postgres-v42: +++++ JAVA_OPTS_TFB='-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet-postgres-v42: ++++ return 0
+Setup servlet-postgres-v42: ++++ return 0
+Setup servlet-postgres-v42: +++ set +x
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: java is installed!
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: java is installed!
+Setup servlet-postgres-v42: Searching for maven
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-v42: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet-postgres-v42: +++ fw_installed maven
+Setup servlet-postgres-v42: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet-postgres-v42: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet-postgres-v42: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-v42: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet-postgres-v42: +++ return 0
+Setup servlet-postgres-v42: +++ return 0
+Setup servlet-postgres-v42: ++ set +x
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: maven is installed!
+Setup servlet-postgres-v42: Searching for postgresql
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-v42: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet-postgres-v42: +++ fw_depends databases
+Setup servlet-postgres-v42: +++ set -E
+Setup servlet-postgres-v42: +++ for depend in '"$@"'
+Setup servlet-postgres-v42: ++++ echo databases
+Setup servlet-postgres-v42: ++++ awk '{print tolower($0)}'
+Setup servlet-postgres-v42: +++ depend=databases
+Setup servlet-postgres-v42: +++ echo Searching for databases
+Setup servlet-postgres-v42: Searching for databases
+Setup servlet-postgres-v42: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet-postgres-v42: +++ retcode=0
+Setup servlet-postgres-v42: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: ++++ pwd
+Setup servlet-postgres-v42: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet-postgres-v42: +++ relative_wd='$FWROOT/installs'
+Setup servlet-postgres-v42: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup servlet-postgres-v42: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-v42: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup servlet-postgres-v42: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-v42: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-v42: +++ set -x
+Setup servlet-postgres-v42: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet-postgres-v42: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-v42: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup servlet-postgres-v42: +++++ echo 0
+Setup servlet-postgres-v42: ++++ RETCODE=0
+Setup servlet-postgres-v42: ++++ '[' '!' 0 == 0 ']'
+Setup servlet-postgres-v42: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet-postgres-v42: ++++ return 0
+Setup servlet-postgres-v42: +++ set +x
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: databases is installed!
+Setup servlet-postgres-v42: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup servlet-postgres-v42: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42:  * Documentation:  https://help.ubuntu.com/
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42:  System information disabled due to load higher than 2.0
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42: New release '16.04.2 LTS' available.
+Setup servlet-postgres-v42: Run 'do-release-upgrade' to upgrade to it.
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42: Welcome to the FrameworkBenchmarks project!
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42:   To get started, perhaps try this:
+Setup servlet-postgres-v42:     $ cd FrameworkBenchmarks
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42:   You can get lots of help:
+Setup servlet-postgres-v42:     $ tfb --help
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42:   You can run a test like:
+Setup servlet-postgres-v42:     $ tfb --mode verify --test gemini
+Setup servlet-postgres-v42: 
+Setup servlet-postgres-v42:   This Vagrant environment is already setup and ready to go.
+Setup servlet-postgres-v42: ERROR:  role "benchmarkdbuser" already exists
+Setup servlet-postgres-v42: NOTICE:  table "world" does not exist, skipping
+Setup servlet-postgres-v42: NOTICE:  table "fortune" does not exist, skipping
+Setup servlet-postgres-v42: NOTICE:  table "World" does not exist, skipping
+Setup servlet-postgres-v42: NOTICE:  table "Fortune" does not exist, skipping
+Setup servlet-postgres-v42: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet-postgres-v42: databases is installed!
+Setup servlet-postgres-v42: [INFO] Scanning for projects...
+Setup servlet-postgres-v42: [WARNING] 
+Setup servlet-postgres-v42: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-v42: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 89, column 12
+Setup servlet-postgres-v42: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 99, column 12
+Setup servlet-postgres-v42: [WARNING] 
+Setup servlet-postgres-v42: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet-postgres-v42: [WARNING] 
+Setup servlet-postgres-v42: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet-postgres-v42: [WARNING] 
+Setup servlet-postgres-v42: [INFO] 
+Setup servlet-postgres-v42: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet-postgres-v42: [INFO]                                                                         
+Setup servlet-postgres-v42: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-v42: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet-postgres-v42: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-v42: Downloading: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.0.0/postgresql-42.0.0.pom
+Setup servlet-postgres-v42: 4/10 KB   8/10 KB   10/10 KB              Downloaded: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.0.0/postgresql-42.0.0.pom (10 KB at 10.5 KB/sec)
+Setup servlet-postgres-v42: Downloading: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.0.0/postgresql-42.0.0.jar
+Setup servlet-postgres-v42: 4/691 KB   8/691 KB   12/691 KB   16/691 KB   20/691 KB   24/691 KB   25/691 KB   28/691 KB   32/691 KB   36/691 KB   40/691 KB   42/691 KB   45/691 KB   48/691 KB   51/691 KB   53/691 KB   56/691 KB   59/691 KB   62/691 KB   65/691 KB   67/691 KB   71/691 KB   73/691 KB   76/691 KB   79/691 KB   81/691 KB   84/691 KB   87/691 KB   90/691 KB   93/691 KB   96/691 KB   98/691 KB   101/691 KB   104/691 KB   107/691 KB   111/691 KB   115/691 KB   115/691 KB   118/691 KB   121/691 KB   124/691 KB   126/691 KB   129/691 KB   132/691 KB   135/691 KB   138/691 KB   141/691 KB   143/691 KB   146/691 KB   149/691 KB   152/691 KB   155/691 KB   157/691 KB   160/691 KB   163/691 KB   166/691 KB   169/691 KB   171/691 KB   174/691 KB   177/691 KB   180/691 KB   183/691 KB   186/691 KB   188/691 KB   191/691 KB   194/691 KB   197/691 KB   200/691 KB   202/691 KB   205/691 KB   209/691 KB   209/691 KB   212/691 KB   215/691 KB   218/691 KB   221/691 KB   223/691 KB   226/691 KB   228/691 KB   232/691 KB   236/691 KB   240/691 KB   244/691 KB   248/691 KB   252/691 KB   256/691 KB   260/691 KB   264/691 KB   268/691 KB   272/691 KB   276/691 KB   280/691 KB   284/691 KB   288/691 KB   292/691 KB   296/691 KB   300/691 KB   304/691 KB   308/691 KB   312/691 KB   316/691 KB   320/691 KB   324/691 KB   326/691 KB   328/691 KB   332/691 KB   332/691 KB   333/691 KB   336/691 KB   339/691 KB   340/691 KB   342/691 KB   344/691 KB   347/691 KB   350/691 KB   354/691 KB   354/691 KB   356/691 KB   358/691 KB   361/691 KB   364/691 KB   367/691 KB   370/691 KB   373/691 KB   375/691 KB   379/691 KB   383/691 KB   384/691 KB   388/691 KB   388/691 KB   391/691 KB   394/691 KB   396/691 KB   399/691 KB   402/691 KB   405/691 KB   408/691 KB   411/691 KB   413/691 KB   415/691 KB   418/691 KB   420/691 KB   423/691 KB   426/691 KB   429/691 KB   432/691 KB   434/691 KB   437/691 KB   440/691 KB   443/691 KB   446/691 KB   448/691 KB   451/691 KB   454/691 KB   457/691 KB   460/691 KB   463/691 KB   465/691 KB   468/691 KB   471/691 KB   474/691 KB   477/691 KB   479/691 KB   483/691 KB   487/691 KB   488/691 KB   491/691 KB   493/691 KB   496/691 KB   499/691 KB   502/691 KB   505/691 KB   508/691 KB   510/691 KB   513/691 KB   516/691 KB   519/691 KB   522/691 KB   523/691 KB   526/691 KB   530/691 KB   530/691 KB   534/691 KB   538/691 KB   542/691 KB   546/691 KB   550/691 KB   553/691 KB   555/691 KB   558/691 KB   561/691 KB   564/691 KB   567/691 KB   569/691 KB   572/691 KB   575/691 KB   578/691 KB   581/691 KB   583/691 KB   586/691 KB   590/691 KB   593/691 KB   597/691 KB   598/691 KB   600/691 KB   603/691 KB   606/691 KB   609/691 KB   612/691 KB   614/691 KB   617/691 KB   620/691 KB   623/691 KB   626/691 KB   628/691 KB   632/691 KB   636/691 KB   637/691 KB   640/691 KB   643/691 KB   645/691 KB   648/691 KB   651/691 KB   654/691 KB   657/691 KB   658/691 KB   661/691 KB   664/691 KB   666/691 KB   669/691 KB   672/691 KB   675/691 KB   678/691 KB   681/691 KB   683/691 KB   686/691 KB   689/691 KB   691/691 KB                Downloaded: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.0.0/postgresql-42.0.0.jar (691 KB at 656.5 KB/sec)
+Setup servlet-postgres-v42: [INFO] 
+Setup servlet-postgres-v42: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet-postgres-v42: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet-postgres-v42: [INFO] 
+Setup servlet-postgres-v42: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet-postgres-v42: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet-postgres-v42: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet-postgres-v42: [INFO] 
+Setup servlet-postgres-v42: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet-postgres-v42: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet-postgres-v42: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet-postgres-v42: [INFO] 
+Setup servlet-postgres-v42: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet-postgres-v42: [INFO] Packaging webapp
+Setup servlet-postgres-v42: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet-postgres-v42: [INFO] Processing war project
+Setup servlet-postgres-v42: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet-postgres-v42: [INFO] Webapp assembled in [2483 msecs]
+Setup servlet-postgres-v42: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet-postgres-v42: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet-postgres-v42: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-v42: [INFO] BUILD SUCCESS
+Setup servlet-postgres-v42: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-v42: [INFO] Total time: 24.672 s
+Setup servlet-postgres-v42: [INFO] Finished at: 2017-04-23T18:55:21+00:00
+Setup servlet-postgres-v42: [INFO] Final Memory: 16M/113M
+Setup servlet-postgres-v42: [INFO] ------------------------------------------------------------------------
+Setup servlet-postgres-v42: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup servlet-postgres-v42: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet-postgres-v42: Status: Poll: None, Port 8080 bound: True, Time Left: 1:43:54.412904
+Setup servlet-postgres-v42: Bound port detected on 8080
+--------------------------------------------------------------------------------
+  Benchmarking servlet-postgres-v42
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopping servlet-postgres-v42
+--------------------------------------------------------------------------------
+Server servlet-postgres-v42: Framework processes have terminated
+--------------------------------------------------------------------------------
+  Stopped servlet-postgres-v42
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Saving results through servlet-postgres-v42
+--------------------------------------------------------------------------------

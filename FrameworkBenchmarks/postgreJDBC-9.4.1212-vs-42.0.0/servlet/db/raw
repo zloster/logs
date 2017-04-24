@@ -1,0 +1,200 @@
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Apr 23 18:23:58 UTC 2017
+
+  System load:  0.16              Processes:           99
+  Usage of /:   6.6% of 39.34GB   Users logged in:     1
+  Memory usage: 6%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+
+---------------------------------------------------------
+ Running Primer servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 5 -c 8 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 5s test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.52ms   19.85ms 187.68ms   88.59%
+    Req/Sec    83.34     43.58   280.00     72.84%
+  Latency Distribution
+     50%    9.69ms
+     75%   23.34ms
+     90%   38.43ms
+     99%   95.82ms
+  3299 requests in 5.05s, 517.97KB read
+Requests/sec:    653.24
+Transfer/sec:    102.56KB
+
+---------------------------------------------------------
+ Running Warmup servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   298.00ms  678.35ms   7.92s    95.01%
+    Req/Sec   168.05    147.82     1.03k    79.80%
+  Latency Distribution
+     50%  111.11ms
+     75%  307.99ms
+     90%  558.24ms
+     99%    3.97s 
+  60268 requests in 1.00m, 9.24MB read
+  Socket errors: connect 0, read 0, write 0, timeout 33
+Requests/sec:   1001.60
+Transfer/sec:    157.26KB
+
+---------------------------------------------------------
+ Synchronizing time
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+ Concurrency: 8 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 8 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.61ms   12.51ms 241.14ms   87.60%
+    Req/Sec   126.80     48.60   363.00     70.13%
+  Latency Distribution
+     50%    5.79ms
+     75%   14.84ms
+     90%   25.64ms
+     99%   52.60ms
+  60597 requests in 1.00m, 9.29MB read
+Requests/sec:   1008.26
+Transfer/sec:    158.31KB
+STARTTIME 1492972052
+ENDTIME 1492972113
+
+---------------------------------------------------------
+ Concurrency: 16 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 16 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.63ms   25.82ms 333.55ms   85.91%
+    Req/Sec   152.39     65.17   440.00     69.13%
+  Latency Distribution
+     50%    9.26ms
+     75%   31.06ms
+     90%   55.03ms
+     99%  112.07ms
+  72422 requests in 1.00m, 11.10MB read
+Requests/sec:   1205.37
+Transfer/sec:    189.25KB
+STARTTIME 1492972115
+ENDTIME 1492972175
+
+---------------------------------------------------------
+ Concurrency: 32 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 32 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.27ms   48.61ms 489.70ms   85.27%
+    Req/Sec   173.61     96.95   580.00     69.07%
+  Latency Distribution
+     50%   10.60ms
+     75%   59.93ms
+     90%  102.84ms
+     99%  210.10ms
+  78677 requests in 1.00m, 12.06MB read
+Requests/sec:   1309.11
+Transfer/sec:    205.55KB
+STARTTIME 1492972177
+ENDTIME 1492972237
+
+---------------------------------------------------------
+ Concurrency: 64 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 64 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    54.06ms   70.57ms 615.22ms   84.46%
+    Req/Sec   189.11    139.54   808.00     73.99%
+  Latency Distribution
+     50%   11.77ms
+     75%   90.05ms
+     90%  153.00ms
+     99%  294.98ms
+  80465 requests in 1.00m, 12.34MB read
+Requests/sec:   1339.01
+Transfer/sec:    210.24KB
+STARTTIME 1492972239
+ENDTIME 1492972299
+
+---------------------------------------------------------
+ Concurrency: 128 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 128 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    77.28ms   98.06ms 791.60ms   84.09%
+    Req/Sec   196.03    163.48     0.98k    80.58%
+  Latency Distribution
+     50%   19.46ms
+     75%  131.75ms
+     90%  215.82ms
+     99%  406.05ms
+  79030 requests in 1.00m, 12.12MB read
+Requests/sec:   1315.73
+Transfer/sec:    206.58KB
+STARTTIME 1492972301
+ENDTIME 1492972361
+
+---------------------------------------------------------
+ Concurrency: 256 for servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' --latency -d 60 -c 256 --timeout 8 -t 8 http://TFB-server:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 1m test @ http://TFB-server:8080/servlet/postgres
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   127.22ms  145.44ms   1.90s    85.23%
+    Req/Sec   208.82    168.39     1.12k    77.97%
+  Latency Distribution
+     50%   60.91ms
+     75%  200.69ms
+     90%  323.11ms
+     99%  632.05ms
+  79152 requests in 1.00m, 12.14MB read
+Requests/sec:   1317.52
+Transfer/sec:    206.86KB
+STARTTIME 1492972363
+ENDTIME 1492972423
