@@ -1,6 +1,11 @@
 # logs
 Various logs for easier collaboration
 
+## Added results from a local run for Servlet+PostgreJDBC driver versions 9.4.1212 vs 42.0.0
+Date: April 23, 2017
+Added: April 24, 2017
+[9.4.1212 vs 42.0.0](/FrameworkBenchmarks/postgreJDBC-9.4.1212-vs-42.0.0)
+
 ## Added console log from failing first run of the tests with TechEmpower Vagrant VM
 Date: March 31, 2017
 Added: March 31, 2017

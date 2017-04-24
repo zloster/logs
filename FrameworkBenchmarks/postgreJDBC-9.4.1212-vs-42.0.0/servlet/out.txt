@@ -1,0 +1,287 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servlet
+self.results['completed']: {}
+================================================================================
+  Beginning servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Starting servlet
+--------------------------------------------------------------------------------
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Apr 23 18:23:38 UTC 2017
+
+  System load:  0.11              Processes:           96
+  Usage of /:   6.6% of 39.34GB   Users logged in:     1
+  Memory usage: 6%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 172.16.0.16
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Welcome to the FrameworkBenchmarks project!
+
+  To get started, perhaps try this:
+    $ cd FrameworkBenchmarks
+
+  You can get lots of help:
+    $ tfb --help
+
+  You can run a test like:
+    $ tfb --mode verify --test gemini
+
+  This Vagrant environment is already setup and ready to go.
+restart: Unknown job: mysql
+restart: Unknown job: mongod
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+cassandra: unrecognized service
+-bash: line 6: /opt/elasticsearch/elasticsearch: No such file or directory
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/bash_functions.sh
+Setup servlet: ++ export DEBIAN_FRONTEND=noninteractive
+Setup servlet: ++ DEBIAN_FRONTEND=noninteractive
+Setup servlet: ++ FW_dep_error=0
+Setup servlet: ++ FW_any_errors=0
+Setup servlet: + source /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/setup_postgresql.sh
+Setup servlet: ++ sed -i 's|localhost|127.0.0.1|g' src/main/webapp/WEB-INF/resin-web.xml
+Setup servlet: ++ fw_depends java resin maven postgresql
+Setup servlet: ++ set -E
+Setup servlet: ++ for depend in '"$@"'
+Setup servlet: +++ echo java
+Setup servlet: +++ awk '{print tolower($0)}'
+Setup servlet: ++ depend=java
+Setup servlet: ++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: ++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: ++ retcode=0
+Setup servlet: ++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: +++ pwd
+Setup servlet: ++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: ++ relative_wd='$FWROOT/installs'
+Setup servlet: +++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup servlet: ++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: ++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup servlet: ++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: ++ set -x
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: +++ fw_installed java
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: ++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: ++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet: ++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet: ++++ export 'JAVA_OPTS_TFB=-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet: ++++ JAVA_OPTS_TFB='-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet: +++ return 0
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for resin
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing dependency: resin from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/webservers/resin/resin.sh
+Setup servlet: +++ fw_depends java
+Setup servlet: +++ set -E
+Setup servlet: +++ for depend in '"$@"'
+Setup servlet: ++++ awk '{print tolower($0)}'
+Setup servlet: ++++ echo java
+Setup servlet: +++ depend=java
+Setup servlet: +++ echo Searching for java
+Setup servlet: Searching for java
+Setup servlet: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: +++ retcode=0
+Setup servlet: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: ++++ pwd
+Setup servlet: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: +++ relative_wd='$FWROOT/installs'
+Setup servlet: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name java.sh
+Setup servlet: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh ]]
+Setup servlet: +++ echo Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: Installing dependency: java from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: +++ set -x
+Setup servlet: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/languages/java.sh
+Setup servlet: ++++ fw_installed java
+Setup servlet: ++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/java.installed ']'
+Setup servlet: ++++ source /home/vagrant/FrameworkBenchmarks/installs/java.installed
+Setup servlet: +++++ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ JAVA_HOME=/usr/lib/jvm/java-8-oracle
+Setup servlet: +++++ export PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet: +++++ PATH=/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet: +++++ export 'JAVA_OPTS_TFB=-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet: +++++ JAVA_OPTS_TFB='-Xms1G -Xmx1G -Xss320k -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts'
+Setup servlet: ++++ return 0
+Setup servlet: ++++ return 0
+Setup servlet: +++ set +x
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: java is installed!
+Setup servlet: Searching for maven
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing dependency: maven from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/systools/maven.sh
+Setup servlet: +++ fw_installed maven
+Setup servlet: +++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/maven.installed ']'
+Setup servlet: +++ source /home/vagrant/FrameworkBenchmarks/installs/maven.installed
+Setup servlet: ++++ export PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet: ++++ PATH=/usr/share/maven3/bin:/home/vagrant/FrameworkBenchmarks/installs/resin-4.0.48/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+Setup servlet: +++ return 0
+Setup servlet: +++ return 0
+Setup servlet: ++ set +x
+Setup servlet: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: maven is installed!
+Setup servlet: Searching for postgresql
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: Installing dependency: postgresql from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet: ++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/postgresql/postgresql.sh
+Setup servlet: +++ fw_depends databases
+Setup servlet: +++ set -E
+Setup servlet: +++ for depend in '"$@"'
+Setup servlet: ++++ awk '{print tolower($0)}'
+Setup servlet: ++++ echo databases
+Setup servlet: +++ depend=databases
+Setup servlet: +++ echo Searching for databases
+Setup servlet: Searching for databases
+Setup servlet: +++ trap 'fw_traperror $depend $? $LINENO "$BASH_COMMAND" $(printf ":%s" ${FUNCNAME[@]}) $(printf ":%s" ${BASH_SOURCE[@]}) $(printf ":%s" ${BASH_LINENO[@]})' ERR
+Setup servlet: +++ retcode=0
+Setup servlet: +++ pushd /home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: ++++ pwd
+Setup servlet: +++ wd=/home/vagrant/FrameworkBenchmarks/installs
+Setup servlet: +++ relative_wd='$FWROOT/installs'
+Setup servlet: ++++ find /home/vagrant/FrameworkBenchmarks/toolset/setup/linux -name databases.sh
+Setup servlet: +++ installation_file=/home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet: +++ [[ -n /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh ]]
+Setup servlet: +++ echo Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet: Installing dependency: databases from /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet: +++ set -x
+Setup servlet: +++ . /home/vagrant/FrameworkBenchmarks/toolset/setup/linux/databases/databases.sh
+Setup servlet: +++++ fw_exists /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet: +++++ '[' -f /home/vagrant/FrameworkBenchmarks/installs/databases.installed ']'
+Setup servlet: +++++ echo 0
+Setup servlet: ++++ RETCODE=0
+Setup servlet: ++++ '[' '!' 0 == 0 ']'
+Setup servlet: ++++ source /home/vagrant/FrameworkBenchmarks/installs/databases.installed
+Setup servlet: ++++ return 0
+Setup servlet: +++ set +x
+Setup servlet: ~/FrameworkBenchmarks/installs ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: databases is installed!
+Setup servlet: Pseudo-terminal will not be allocated because stdin is not a terminal.
+Setup servlet: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+Setup servlet: 
+Setup servlet:  * Documentation:  https://help.ubuntu.com/
+Setup servlet: 
+Setup servlet:   System information as of Sun Apr 23 18:23:56 UTC 2017
+Setup servlet: 
+Setup servlet:   System load:  0.09              Processes:           97
+Setup servlet:   Usage of /:   6.6% of 39.34GB   Users logged in:     1
+Setup servlet:   Memory usage: 6%                IP address for eth0: 10.0.2.15
+Setup servlet:   Swap usage:   0%                IP address for eth1: 172.16.0.16
+Setup servlet: 
+Setup servlet:   Graph this data and manage this system at:
+Setup servlet:     https://landscape.canonical.com/
+Setup servlet: 
+Setup servlet: New release '16.04.2 LTS' available.
+Setup servlet: Run 'do-release-upgrade' to upgrade to it.
+Setup servlet: 
+Setup servlet: 
+Setup servlet: Welcome to the FrameworkBenchmarks project!
+Setup servlet: 
+Setup servlet:   To get started, perhaps try this:
+Setup servlet:     $ cd FrameworkBenchmarks
+Setup servlet: 
+Setup servlet:   You can get lots of help:
+Setup servlet:     $ tfb --help
+Setup servlet: 
+Setup servlet:   You can run a test like:
+Setup servlet:     $ tfb --mode verify --test gemini
+Setup servlet: 
+Setup servlet:   This Vagrant environment is already setup and ready to go.
+Setup servlet: ERROR:  role "benchmarkdbuser" already exists
+Setup servlet: NOTICE:  table "world" does not exist, skipping
+Setup servlet: NOTICE:  table "fortune" does not exist, skipping
+Setup servlet: NOTICE:  table "World" does not exist, skipping
+Setup servlet: NOTICE:  table "Fortune" does not exist, skipping
+Setup servlet: ~/FrameworkBenchmarks/frameworks/Java/servlet
+Setup servlet: databases is installed!
+Setup servlet: [INFO] Scanning for projects...
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 89, column 12
+Setup servlet: [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 99, column 12
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Setup servlet: [WARNING] 
+Setup servlet: [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Setup servlet: [WARNING] 
+Setup servlet: [INFO] 
+Setup servlet: [INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+Setup servlet: [INFO]                                                                         
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/9.4.1212/postgresql-9.4.1212.pom
+Setup servlet: 4/10 KB   8/10 KB   10/10 KB              Downloaded: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/9.4.1212/postgresql-9.4.1212.pom (10 KB at 9.2 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/org/postgresql/pgjdbc-core-parent/1.1.2/pgjdbc-core-parent-1.1.2.pom
+Setup servlet: 4/16 KB    8/16 KB   12/16 KB   16/16 KB   16/16 KB              Downloaded: http://repo.maven.apache.org/maven2/org/postgresql/pgjdbc-core-parent/1.1.2/pgjdbc-core-parent-1.1.2.pom (16 KB at 107.5 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/org/postgresql/pgjdbc-versions/1.1.2/pgjdbc-versions-1.1.2.pom
+Setup servlet: 3/23 KB    7/23 KB   11/23 KB   15/23 KB   19/23 KB   23/23 KB   23/23 KB              Downloaded: http://repo.maven.apache.org/maven2/org/postgresql/pgjdbc-versions/1.1.2/pgjdbc-versions-1.1.2.pom (23 KB at 172.8 KB/sec)
+Setup servlet: Downloading: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/9.4.1212/postgresql-9.4.1212.jar
+Setup servlet: 4/665 KB   6/665 KB   10/665 KB   14/665 KB   18/665 KB   22/665 KB   26/665 KB   30/665 KB   34/665 KB   38/665 KB   42/665 KB   46/665 KB   49/665 KB   52/665 KB   55/665 KB   58/665 KB   60/665 KB   63/665 KB   66/665 KB   69/665 KB   72/665 KB   74/665 KB   77/665 KB   80/665 KB   84/665 KB   88/665 KB   92/665 KB   96/665 KB   100/665 KB   104/665 KB   108/665 KB   112/665 KB   116/665 KB   120/665 KB   124/665 KB   128/665 KB   132/665 KB   132/665 KB   135/665 KB   138/665 KB   141/665 KB   143/665 KB   146/665 KB   149/665 KB   152/665 KB   155/665 KB   157/665 KB   160/665 KB   163/665 KB   166/665 KB   169/665 KB   171/665 KB   174/665 KB   177/665 KB   181/665 KB   185/665 KB   189/665 KB   193/665 KB   197/665 KB   201/665 KB   205/665 KB   209/665 KB   213/665 KB   217/665 KB   221/665 KB   225/665 KB   229/665 KB   229/665 KB   232/665 KB   235/665 KB   238/665 KB   240/665 KB   244/665 KB   248/665 KB   252/665 KB   256/665 KB   260/665 KB   264/665 KB   268/665 KB   272/665 KB   276/665 KB   280/665 KB   284/665 KB   288/665 KB   292/665 KB   296/665 KB   300/665 KB   304/665 KB   308/665 KB   309/665 KB   313/665 KB   317/665 KB   321/665 KB   325/665 KB   329/665 KB   333/665 KB   337/665 KB   341/665 KB   345/665 KB   349/665 KB   353/665 KB   354/665 KB   358/665 KB   362/665 KB   366/665 KB   370/665 KB   373/665 KB   377/665 KB   381/665 KB   385/665 KB   389/665 KB   393/665 KB   397/665 KB   401/665 KB   405/665 KB   409/665 KB   413/665 KB   417/665 KB   421/665 KB   425/665 KB   427/665 KB   430/665 KB   433/665 KB   437/665 KB   439/665 KB   441/665 KB   445/665 KB   449/665 KB   453/665 KB   457/665 KB   461/665 KB   465/665 KB   469/665 KB   473/665 KB   477/665 KB   481/665 KB   485/665 KB   489/665 KB   493/665 KB   497/665 KB   501/665 KB   505/665 KB   509/665 KB   513/665 KB   517/665 KB   521/665 KB   525/665 KB   529/665 KB   533/665 KB   537/665 KB   541/665 KB   545/665 KB   549/665 KB   553/665 KB   557/665 KB   561/665 KB   565/665 KB   569/665 KB   573/665 KB   577/665 KB   581/665 KB   585/665 KB   589/665 KB   593/665 KB   597/665 KB   601/665 KB   605/665 KB   609/665 KB   613/665 KB   617/665 KB   621/665 KB   625/665 KB   629/665 KB   633/665 KB   637/665 KB   641/665 KB   645/665 KB   649/665 KB   653/665 KB   657/665 KB   661/665 KB   665/665 KB                Downloaded: http://repo.maven.apache.org/maven2/org/postgresql/postgresql/9.4.1212/postgresql-9.4.1212.jar (665 KB at 1538.2 KB/sec)
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+Setup servlet: [INFO] Deleting /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ world ---
+Setup servlet: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+Setup servlet: [INFO] skip non existing resourceDirectory /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/resources
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ world ---
+Setup servlet: [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+Setup servlet: [INFO] Compiling 11 source files to /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/classes
+Setup servlet: [INFO] 
+Setup servlet: [INFO] --- maven-war-plugin:2.2:war (default-cli) @ world ---
+Setup servlet: [INFO] Packaging webapp
+Setup servlet: [INFO] Assembling webapp [world] in [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+Setup servlet: [INFO] Processing war project
+Setup servlet: [INFO] Copying webapp resources [/home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/src/main/webapp]
+Setup servlet: [INFO] Webapp assembled in [2198 msecs]
+Setup servlet: [INFO] Building war: /home/vagrant/FrameworkBenchmarks/frameworks/Java/servlet/target/servlet.war
+Setup servlet: [INFO] WEB-INF/web.xml already added, skipping
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] BUILD SUCCESS
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: [INFO] Total time: 25.310 s
+Setup servlet: [INFO] Finished at: 2017-04-23T18:24:34+00:00
+Setup servlet: [INFO] Final Memory: 16M/115M
+Setup servlet: [INFO] ------------------------------------------------------------------------
+Setup servlet: Resin/4.0.48 launching watchdog at 127.0.0.1:6600
+Setup servlet: Resin/4.0.48 started -server 'default' with watchdog at 127.0.0.1:6600
+Setup servlet: Status: Poll: None, Port 8080 bound: True, Time Left: 1:43:52.705560
+Setup servlet: Bound port detected on 8080
+--------------------------------------------------------------------------------
+  Benchmarking servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Stopping servlet
+--------------------------------------------------------------------------------
+Server servlet: Framework processes have terminated
+--------------------------------------------------------------------------------
+  Stopped servlet
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+  Saving results through servlet
+--------------------------------------------------------------------------------
