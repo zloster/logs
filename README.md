@@ -1,6 +1,11 @@
 # logs
 Various logs for easier collaboration
 
+## Added images and dropwizard configuration settings to demostrate the Hibernate SQL batch updates in action
+Date: February 5, 2018
+Added: February 5, 2018
+[dropwizard/Hibernate](/FrameworkBenchmarks/dropwizard-hibernate-batch-updates)
+
 ## Added results from a local run for Servlet+PostgreJDBC driver versions 9.4.1212 vs 42.0.0
 Date: April 23, 2017
 Added: April 24, 2017
@@ -26,6 +31,3 @@ Date:   November 25, 2016
 Date:   November 15, 2016
 
 [dropwizard and PostgreSQL JDBC driver](/FrameworkBenchmarks/dropwizard-postgresql-driver/)
-
-    
-
