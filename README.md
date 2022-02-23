@@ -4,7 +4,7 @@ Various information pieces related to external collaboration
 ## Add Hibernate ORM test case about the missing flush and the JPA specification
 Date: February 23, 2022
 Added: February 23, 2022
-[h5.2-notransaction](/h5.2-notransaction/src/test/java/com/gitlab/zloster/NoTransactions.java)
+[h5.2-notransaction](/h5.2-notransaction)
 
 ## Added images and dropwizard configuration settings to demostrate the Hibernate SQL batch updates in action
 Date: February 5, 2018
