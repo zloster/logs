@@ -1,5 +1,10 @@
 # logs
-Various logs for easier collaboration
+Various information pieces related to external collaboration
+
+## Add Hibernate ORM test case about the missing flush and the JPA specification
+Date: February 23, 2022
+Added: February 23, 2022
+[h5.2-notransaction](/h5.2-notransaction/src/test/java/com/gitlab/zloster/NoTransactions.java)
 
 ## Added images and dropwizard configuration settings to demostrate the Hibernate SQL batch updates in action
 Date: February 5, 2018
@@ -24,10 +29,8 @@ Added:   March 23, 2017
 
 ## Added results from a local run for servlet JSON test with updated Jackson and enabled Afterburner module
 Date:   November 25, 2016
-
 [afterburner-logs](/FrameworkBenchmarks/afterburner-logs)
 
 ## Added results from a local run for dropwizard-postgres with various jdbc drivers
 Date:   November 15, 2016
-
 [dropwizard and PostgreSQL JDBC driver](/FrameworkBenchmarks/dropwizard-postgresql-driver/)
